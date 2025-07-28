@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-navbar{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #A3BC9F;
+}
