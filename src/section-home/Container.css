@@ -1,0 +1,13 @@
+.container-cards{
+    background-color: #F4F4F4;
+}
+
+.card{
+    background-color: #fff;
+    overflow-y: hidden;
+}
+
+.text-card{
+    font-size: 15px;
+    padding: 12px;
+}
