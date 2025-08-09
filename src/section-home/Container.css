@@ -48,3 +48,9 @@
 .btn:hover {
   color: white;
 }
+
+.products{
+  font-size: 3rem;
+  color: #758573;
+  font-weight: 300;
+}

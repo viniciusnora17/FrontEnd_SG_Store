@@ -7,9 +7,9 @@ import imgHome4 from '../../src/section-home/img-home/img-4.png';
 
 const Dropdown = () => {
     return (
-        <div className="flex flex-wrap justify-center items-center gap-9 min-h-[91dvh] container-cards">
+        <div className="flex flex-wrap justify-center items-center gap-9 min-h-[100dvh] container-cards">
 
-              <h2 className="w-full text-center text-4xl">produtos</h2>
+              <h2 className="w-full text-center products">novidades</h2>
 
 
                <div className="h-[750px] w-[90%] sm:w-[45%] md:w-[30%] lg:w-[22%] p-4 card">
