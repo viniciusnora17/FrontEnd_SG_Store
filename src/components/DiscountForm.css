@@ -1,0 +1,36 @@
+.discount{
+    font-size: 2.3rem;
+}
+
+.btn-discount{
+  border: 1px solid black;
+  width: 130px;
+  height: 4vh;
+  background-color: transparent;
+
+  font-weight: bold;
+
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.btn-discount:hover{
+  background-color: #7d917a;
+  color: #F4F4F4;
+  border: 1px solid #7d917a;
+}
+
+#email{
+    border: 1px solid black;
+    width: 40%;
+    height: 4vh;
+}
+
+form h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.container-checkbox{
+    margin-top: 1%;
+}

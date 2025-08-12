@@ -1,34 +1,16 @@
-import { useState } from 'react';
-import Navbar from './components/navbar/Navbar';
-import Dropdown from './components/navbar/Dropdown';
-import Container from './section-home/Container';
-import Carousel from './section-home/Carousel'; 
-import Footer from './components/footer/Footer'
-
-import img1 from './carousel-img/img1.png';
-import img2 from './carousel-img/img2.png';
-import img3 from './carousel-img/img3.png';
-
-const images = [img1, img2, img3];
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import SobreNos from "./pages/Sobrenos";
 
 function App() {
   return (
-    <>
-      <div className="navbar-container-fixed">
-        <Navbar />
-        <Dropdown />
-      </div>
-
-      <div>
-        <Carousel images={images} />
-      </div>
-
-      <div className="main-container">
-        <Container />
-      </div>
-
-      <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre-nos" element={<SobreNos />} />
+      </Routes>
+    </Router>
   );
 }
 

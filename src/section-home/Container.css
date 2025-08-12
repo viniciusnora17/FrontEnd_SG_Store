@@ -2,55 +2,45 @@
     background-color: #F4F4F4;
 }
 
-.card{
-    background-color: #fff;
-    overflow-y: hidden;
-}
-
-.text-card{
-    font-size: 15px;
-    padding-top: 17px;
-}
-
-.container-btn{
-    margin-top: 20px;
-}
-
-.btn {
-  position: relative;
-  overflow: hidden;
+.btn{
+  margin-top: 3%;
+  border: 1px solid black;
+  width: 160px;
+  height: 5vh;
   background-color: transparent;
-  border: 2px solid #81947e;
-  width: 7rem;
-  font-weight: 500;
-  color: #81947e;
+
+  font-weight: bold;
+
+  transition: background-color 0.4s ease, color 0.4s ease;
   cursor: pointer;
-  z-index: 1;
-  transition: color 0.4s ease;
 }
 
-.btn::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0%;
-  background-color: #81947e;
-  z-index: -1;
-  transition: height 0.4s ease;
+.btn:hover{
+  background-color: #7d917a;
+  color: #F4F4F4;
+  border: 1px solid #7d917a;
 }
 
-.btn:hover::before {
-  height: 100%;
+.btn-destaque{
+  margin-top: 3%;
+  border: 1px solid rgb(255, 255, 255);
+  width: 170px;
+  height: 4vh;
+  font-size: 0.9rem;
+
+
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
 }
 
-.btn:hover {
-  color: white;
+.btn-destaque:hover{
+  background-color: #7d917a;
+  color: #F4F4F4;
+  border: 1px solid #7d917a;
 }
 
 .products{
   font-size: 3rem;
   color: #758573;
-  font-weight: 300;
+  font-weight: 400;
 }

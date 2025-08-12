@@ -1,25 +1,29 @@
-import React from 'react'
+import React from 'react';
 import './Navbar.css';
 import sgLogo from '../../assets/sg-logo.jpg';
-import iconUser from '../../icons/user.png'
-import shoppingCart from '../../icons/shopping-cart.png'
-import magnifyingGlass from '../../icons/magnifying-glass.png'
+import shoppingCart from '../../icons/shopping-cart.png';
+import magnifyingGlass from '../../icons/magnifying-glass.png';
+import Bag from '../../icons/shopping-bag.png';
+import Heart from '../../icons/heart.png';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-
       <div className='user-area'>
         <div className='my-account'>
-          <img src={iconUser} alt="User Ícone" /> minha conta
+           <a href="">entrar</a>
         </div>
-        <div className='shop-cart'>
-          <img src={shoppingCart} alt="Carrinho de Compras" />
+        <div className='shop-cart cursor-pointer'>
+          <img src={Bag} alt="Carrinho de Compras" />
+          <img src={Heart} alt="Carrinho de Compras" />
         </div>
       </div>
 
-      <img src={sgLogo} alt="SG Logo" className='logo'/>
-
+      {/* Logo clicável que vai para a Home */}
+      <Link to="/">
+        <img src={sgLogo} alt="SG Logo" className='logo cursor-pointer'/>
+      </Link>
 
       <div className='navbar-links'>
         <div className='search-box'>
@@ -27,7 +31,6 @@ const Navbar = () => {
           <img src={magnifyingGlass} alt="Lupa" />
         </div>
       </div>
-
     </div>
   );
 };

@@ -16,7 +16,6 @@
 }
 
 
-
 .dropdown-title {
   color: white;
   cursor: pointer;
@@ -38,7 +37,7 @@
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.5s ease, visibility 0.5s;
   position: fixed;
-  top: 16.9vh;
+  top: 15.3vh;
   left: 0;
   width: 100vw;
   background-color: #ffffff;

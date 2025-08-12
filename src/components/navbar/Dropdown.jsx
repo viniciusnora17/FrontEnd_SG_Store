@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Dropdown.css';
+import { Link } from "react-router-dom";
 
 const Dropdown = () => {
   const [openMenu, setOpenMenu] = useState(null);
@@ -61,7 +62,7 @@ const Dropdown = () => {
         </div>
 
         <a href="" className='dropdown-title'>vestidos</a>
-        <a href="" className='dropdown-title'>sobre-nós</a>
+         <Link className='dropdown-title' to="/sobre-nos">sobre nós</Link>
       </div>
 
 

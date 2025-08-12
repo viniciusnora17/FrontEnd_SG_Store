@@ -5,74 +5,48 @@ import imgHome2 from '../../src/section-home/img-home/img2.png';
 import imgHome3 from '../../src/section-home/img-home/img3.png';
 import imgHome4 from '../../src/section-home/img-home/img-4.png';
 
-const Dropdown = () => {
+const Container = () => {
     return (
-        <div className="flex flex-wrap justify-center items-center gap-9 min-h-[100dvh] container-cards">
+        <div className="flex flex-col justify-center items-center min-h-[95dvh] container-cards px-4">
+            <h2 className="w-full text-center products mb-12">novidades</h2>
 
-              <h2 className="w-full text-center products">novidades</h2>
-
-
-               <div className="h-[750px] w-[90%] sm:w-[45%] md:w-[30%] lg:w-[22%] p-4 card">
-               <img src={imgHome1} alt="" claassName="w-full object-cover rounded" />
-               <div class="flex  justify-around">
-                   <div class="text-card">
-                       <p>vestido tule curto emma</p>
-                       <p>R$ 159,00</p>
-                       <p>R$ 151,00 no pix</p>
-                       <p>3x de <b>R$ 159,00</b> sem juros</p>
-                   </div>
-                     <div className='container-btn'>
-                        <button className='btn'>Comprar</button>
+            <div className="flex flex-wrap justify-center gap-3 w-full max-w-full">
+                
+                {/* Card 1 */}
+                <div className="flex flex-col w-full sm:w-[45%] md:w-[30%] lg:w-[20%]">
+                    <img className="w-full object-cover" src={imgHome1} alt="Vestido Baggy Legl" />
+                    <div className='p-2'>
+                        <p className="">vestido baggy legl</p>
+                        <p className="">R$ 359,90</p>
                     </div>
-               </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="flex flex-col w-full sm:w-[45%] md:w-[30%] lg:w-[20%]">
+                    <img className="w-full object-cover" src={imgHome2} alt="Vestido Baggy Legl" />
+                    <p className="">vestido baggy legl</p>
+                    <p className="">R$ 359,90</p>
+                </div>
+
+                {/* Card 3 */}
+                <div className="flex flex-col w-full sm:w-[45%] md:w-[30%] lg:w-[20%]">
+                    <img className="w-full object-cover" src={imgHome3} alt="Vestido Baggy Legl" />
+                    <p className="">vestido baggy legl</p>
+                    <p className="">R$ 359,90</p>
+                </div>
+
+                {/* Card 4 */}
+                <div className="flex flex-col w-full sm:w-[45%] md:w-[30%] lg:w-[20%]">
+                    <img className="w-full object-cover" src={imgHome4} alt="Vestido Baggy Legl" />
+                    <p className="">vestido baggy legl</p>
+                    <p className="">R$ 359,90</p>
+                </div>
+                
             </div>
 
-            <div className="h-[750px] w-[90%] sm:w-[45%] md:w-[30%] lg:w-[22%] p-4 card">
-               <img src={imgHome2} alt="" className="w-full object-cover rounded" />
-               <div class="flex justify-around">
-                   <div class="text-card">
-                       <p>vestido tule curto emma</p>
-                       <p>R$ 159,00</p>
-                       <p>R$ 151,00 no pix</p>
-                       <p>3x de <b>R$ 159,00</b> sem juros</p>
-                   </div>
-                     <div className='container-btn'>
-                        <button className='btn'>Comprar</button>
-                    </div>
-               </div>
-            </div>
-            
-            <div className="h-[750px] w-[90%] sm:w-[45%] md:w-[30%] lg:w-[22%] p-4 card">
-               <img src={imgHome3} alt="" className="w-full object-cover rounded" />
-               <div class="flex  justify-around">
-                   <div class="text-card">
-                       <p>vestido tule curto emma</p>
-                       <p>R$ 159,00</p>
-                       <p>R$ 151,00 no pix</p>
-                       <p>3x de <b>R$ 159,00</b> sem juros</p>
-                   </div>
-                     <div className='container-btn'>
-                        <button className='btn'>Comprar</button>
-                    </div>
-               </div>
-            </div>
-
-            <div className="h-[750px] w-[90%] sm:w-[45%] md:w-[30%] lg:w-[22%] p-4 card">
-               <img src={imgHome4} alt="" className="w-full object-cover rounded" />
-               <div class="flex  justify-around">
-                   <div class="text-card">
-                       <p>vestido tule curto emma</p>
-                       <p>R$ 159,00</p>
-                       <p>R$ 151,00 no pix</p>
-                       <p>3x de <b>R$ 159,00</b> sem juros</p>
-                   </div>
-                     <div className='container-btn'>
-                        <button className='btn'>Comprar</button>
-                    </div>
-               </div>
-            </div>
+            <button className='btn'>ver mais</button>
         </div>
     );
 };
 
-export default Dropdown;
+export default Container;
