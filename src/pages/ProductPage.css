@@ -1,0 +1,98 @@
+
+.container-product{
+  margin-top: 5%;
+}
+
+.price{
+    font-size: 1.4rem;
+    margin-top: 3%;
+}
+
+.line{
+    width: 85%;
+    background-color: rgb(204, 212, 212);
+    height: 1px;
+    margin-top: 5%;
+}
+
+.card-payment{
+    font-size: 0.85rem;
+    margin-top: 5%;
+    color: rgb(49, 49, 49);
+}
+
+.size-select{
+    margin-top: 5%;
+}
+
+.size-select h3{
+    font-weight: 300;
+    color: black;
+}
+
+.sizes-selector{
+    padding: 10px 0;
+}
+.size-option {
+  border: 1px solid rgb(129, 128, 128);
+  width: 15%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.size-option:hover {
+  background-color: rgb(219, 218, 218);
+}
+
+.size-option input {
+  display: none; 
+}
+
+.size-option input:checked + span {
+  background-color: rgb(200, 200, 200); 
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cep{
+    margin-top: 20px;
+}
+
+.cep input{
+    border: 1px solid rgb(179, 177, 177);
+    padding: 4px; 
+    width: 40%;
+}
+
+.btn-buy{
+  margin-top: 10%;
+  border: 1px solid black;
+  width: 160px;
+  height: 5vh;
+  background-color: transparent;
+
+  font-weight: bold;
+
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.btn-buy:hover{
+  background-color: #7d917a;
+  color: #F4F4F4;
+  border: 1px solid #7d917a;
+}
+
+.cep-button{
+  border: 1px solid black;
+  padding: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}

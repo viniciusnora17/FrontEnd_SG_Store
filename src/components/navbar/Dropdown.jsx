@@ -30,12 +30,12 @@ const Dropdown = () => {
             <span className="dropdown-title">roupas</span>
             <div className={`dropdown-content ${openMenu === 'roupas' ? 'show' : ''}`}>
               <div className='hiperlinks'>
-                <div>t-shirts</div>
-                <div>blusas básicas</div>
-                <div>tricots</div>
-                <div>calças</div>
-                <div>shorts e bermudas</div>
-                <div>cropped e blusas</div>
+                <div> <Link to="/categoria/t-shirts">t-shirts</Link></div>
+                <div><Link to="/categoria/blusas-basicas">blusas básicas</Link></div>
+                <div><Link to="/categoria/tricots">tricots</Link></div>
+                <div><Link to="/categoria/calcas">calças</Link></div>
+                <div><Link to="/categoria/shorts-e-bermudas">shorts e bermudas</Link></div>
+                <div><Link to="/categoria/cropped-e-blusas">cropped e blusas</Link></div>
               </div>
             </div>
           </div>

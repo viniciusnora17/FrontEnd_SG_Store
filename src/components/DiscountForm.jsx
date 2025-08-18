@@ -25,6 +25,8 @@ const DiscountForm = () => {
         
         <div className="flex justify-center gap-4">
           <input
+            className="input"
+            placeholder="email" 
             type="email"
             name="email"
             id="email"
@@ -37,6 +39,7 @@ const DiscountForm = () => {
 
         <div className="flex items-center gap-2 justify-center container-checkbox text-gray-700">
           <input
+  
             className="transform scale-130 cursor-pointer"
             type="checkbox"
             name="checkbox"

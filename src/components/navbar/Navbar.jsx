@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='user-area'>
         <div className='my-account'>
-           <a href="">entrar</a>
+           <Link to="/login">entrar</Link>
         </div>
         <div className='shop-cart cursor-pointer'>
           <img src={Bag} alt="Carrinho de Compras" />

@@ -34,3 +34,7 @@ form h2{
 .container-checkbox{
     margin-top: 1%;
 }
+
+.input{
+  padding-left: 10px;
+}
