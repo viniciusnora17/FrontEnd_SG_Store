@@ -9,12 +9,7 @@
   padding: 0 15rem;
 }
 
-.logo {
-  /* margin-top: 1%; */
-  cursor: pointer;
-  width: 110px;
-  flex-shrink: 0;
-}
+
 
 ul{
     flex: 1;
@@ -81,7 +76,10 @@ ul li{
 
   color: #fff;
   /* font-weight: 400; */
+}
 
+.my-account:hover{
+  text-decoration: underline;
 }
 
 .shop-cart{
@@ -90,6 +88,12 @@ ul li{
   justify-content: space-between;
   gap: 10px;
   width: 8%;
+}
+
+@media(max-width: 425px){
+  /* .logo{
+    width: 100px !important;
+  } */
 }
 
 

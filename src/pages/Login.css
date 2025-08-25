@@ -1,3 +1,5 @@
+
+
 .form-login{
     width: 20%;
     display: flex;
@@ -21,11 +23,14 @@
 .subtitle-login{
     font-size: 2.4rem;
     font-weight: 300;
+    overflow: hidden !important;
 }
 
 .subtitle-access{
     font-size: 2.4rem !important;
     font-weight: 300;
+    overflow-x: hidden !important;
+    
 }
 
 .line-login{
@@ -37,7 +42,7 @@
 .btn-entrar{
     color: white;
   width: 120px;
-  height: 4vh;
+  height: 5vh;
   background-color: #A3BC9F;
 
   font-weight: bold;
@@ -47,4 +52,25 @@
 
 .underline:hover{
     color: #A3BC9F;
+}
+
+.btn-google{
+    height: 6vh;
+    margin-top: 50px;
+    border: 1px solid rgb(175, 174, 174);
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+}
+
+.btn-apple{
+     height: 6vh;
+    margin-top: 20px;
+    border: 1px solid rgb(175, 174, 174);
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+}
+
+.btn-apple:hover, .btn-google:hover{
+    background-color: rgb(224, 223, 223);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }

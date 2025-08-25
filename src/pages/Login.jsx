@@ -4,6 +4,9 @@ import Navbar from '../components/navbar/Navbar';
 import Dropdown from '../components/navbar/Dropdown';
 import Footer from '../components/footer/Footer';
 import './Login.css'
+import Google from "../icons/google.png";
+import Apple from "../icons/apple.png";
+
 
 import { Link } from "react-router-dom";
 
@@ -15,10 +18,10 @@ export default function Login() {
           <Dropdown />
         </div>
 
-    <div className="flex items-center justify-evenly h-[90vh] ">
-      <form className="form-login" action="">
+    <div className="flex items-center justify-evenly h-[100vh] ">
+      <form className="form-login overflow-hidden"  action="">
 
-        <h2 className="subtitle-access">acessar minha conta</h2>
+        <h2 className="subtitle-access overflow-hidden">acessar minha conta</h2>
 
         <div className="flex flex-col justify-evenly w-full h-[53%]">
 
@@ -33,10 +36,20 @@ export default function Login() {
            </div>
         </div>
 
-        <div className="flex items-center justify-between w-95">
+        <div className="flex items-center justify-between w-95 overflow-hidden">
           <button className="btn-entrar">entrar</button>
           <a className="underline" href="">esqueci minha senha</a>
         </div>
+
+      <div className="flex items-center justify-around gap-20 w-[100%] btn-google">
+       <button>entrar com sua conta google</button>
+        <img src={Google} alt="" />
+      </div>
+
+      <div className="flex items-center justify-around gap-20 w-[100%] btn-apple">
+       <button>entrar com sua conta apple</button>
+        <img src={Apple} alt="" />
+      </div>
       
       </form>
 
@@ -50,6 +63,7 @@ export default function Login() {
           <p>-fique por dentro de lançamentos</p>
         </div>
         <button className="btn-entrar">criar conta</button>
+     
       </div>
 
   

@@ -22,7 +22,7 @@ const Navbar = () => {
 
       {/* Logo clicável que vai para a Home */}
       <Link to="/">
-        <img src={sgLogo} alt="SG Logo" className='logo cursor-pointer'/>
+        <img src={sgLogo} alt="SG Logo" className='logo cursor-pointer  w-[110px] max-[425px]:w-[100px]'/>
       </Link>
 
       <div className='navbar-links'>
