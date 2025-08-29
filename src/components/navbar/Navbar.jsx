@@ -5,9 +5,11 @@ import shoppingCart from '../../icons/shopping-cart.png';
 import magnifyingGlass from '../../icons/magnifying-glass.png';
 import Bag from '../../icons/shopping-bag.png';
 import Heart from '../../icons/heart.png';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='navbar'>
       <div className='user-area'>
@@ -16,7 +18,7 @@ const Navbar = () => {
         </div>
         <div className='shop-cart cursor-pointer'>
           <img src={Bag} alt="Carrinho de Compras" />
-          <img src={Heart} alt="Carrinho de Compras" />
+          <img className='h-5.5'  onClick={() => navigate("/liked")}  src={Heart} alt="Carrinho de Compras" />
         </div>
       </div>
 
