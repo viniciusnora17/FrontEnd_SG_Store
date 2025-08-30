@@ -5,6 +5,9 @@ import Footer from '../components/footer/Footer';
 import './Login.css';
 import Google from "../icons/google.png";
 import Apple from "../icons/apple.png";
+import imgModal from "/img-modal.png";
+import GoogleGreen from "../icons/google-green.png"
+import AppleGreen from "../icons/apple-green.png"
 
 export default function Login() {
   const [showModal, setShowModal] = useState(false);
@@ -68,27 +71,69 @@ export default function Login() {
       </div>
 
       {/* Modal */}
-      {showModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white !p-14 rounded-lg w-[500px] h-[500px] shadow-lg">
-            <div className="flex !items-center justify-between">
-              <h2 className="text-4xl font-light !mb-4 overflow-hidden">criar conta</h2>
-              <button
-                onClick={() => setShowModal(false)}
-                className="!mb-3 underline text-gray-600 cursor-pointer"
-              >
-                Fechar
-              </button>
-            </div>
-            <form className="flex flex-col gap-5 !mt-6">
-              <input type="text" placeholder="Nome completo" className="input-login !p-2" />
-              <input type="email" placeholder="Email" className="input-login !p-2" />
-              <input type="password" placeholder="Senha" className="input-login !p-2" />
-              <button className="btn-entrar">registrar</button>
-            </form>
-          </div>
+ {showModal && (
+  <div
+    className="fixed inset-0 bg-black/50 flex items-center justify-center !mt-10 !z-50"
+    onClick={() => setShowModal(false)} // clique no fundo fecha
+  >
+    <div
+      className="flex rounded-lg shadow-lg overflow-hidden"
+      onClick={(e) => e.stopPropagation()} // impede o fechamento ao clicar dentro
+    >
+      {/* Coluna da imagem */}
+      <div className="w-[400px] h-[65dvh]">
+        <img
+          src={imgModal}
+          alt="background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Coluna do formulário */}
+      <div className="bg-[#F4F4F4] !p-10 w-[420px] h-[65dvh] flex flex-col">
+        <div className="flex items-center justify-center !mb-6">
+          <h2 className="text-4xl overflow-hidden font-bold text-[#71836e]">
+            criar conta
+          </h2>
         </div>
-      )}
+
+        <form className="flex flex-col gap-5 flex-1 ">
+          <input type="text" placeholder="Nome completo" className="input-login !p-2 shadow-lg" />
+          <input type="email" placeholder="Email" className="input-login !p-2 shadow-lg" />
+          <input type="cpf" placeholder="CPF" className="input-login !p-2 shadow-lg" />
+          <input type="password" placeholder="Senha" className="input-login !p-2 shadow-lg" />
+            
+          <div className="flex items-center justify-start gap-2">
+            <input className="cursor-pointer" type="checkbox" name="aceito" id="aceito" />
+            <p className="use-terms">aceito termos e condições de uso</p>
+          </div>
+
+          <button type="submit" className="btn-modal">cadastrar-se →</button>
+
+          <div className="line-container flex items-center justify-between">
+            <div className="line-modal"></div>
+            <span className="span">ou</span>
+            <div className="line-modal"></div>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <div className="btn-social">
+              <img src={AppleGreen} alt="" />
+              <p>crie sua conta com a apple</p>
+            </div>
+
+            <div className="btn-social">
+              <img src={GoogleGreen} alt="" />
+              <p>crie sua conta com google</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+)}
+
+
 
       <Footer />
     </>

@@ -74,3 +74,46 @@
     background-color: rgb(224, 223, 223);
     transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+.btn-modal{
+    background-color: #A7B1A5;
+    color: white;
+    height: 4vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-modal:hover{
+    background-color: #9aa598
+}
+
+.use-terms{
+    font-size: 13px;
+}
+
+.line-modal{
+    width: 45%;
+    height: 1px;
+    background-color: rgb(177, 177, 177);
+}
+
+.span{
+    font-size: 14px;
+}
+
+.btn-social{
+    border: 1px solid rgb(194, 193, 193);
+    height: 4vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.btn-social:hover{
+    background-color: #c7c9c6;
+    border: 1px solid rgb(155, 154, 154);
+}
