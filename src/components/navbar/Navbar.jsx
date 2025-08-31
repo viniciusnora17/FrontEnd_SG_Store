@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
 
+
   return (
     <div className='navbar'>
       <div className='user-area'>
@@ -17,8 +18,8 @@ const Navbar = () => {
            <Link to="/login">entrar</Link>
         </div>
         <div className='shop-cart cursor-pointer'>
-          <img src={Bag} alt="Carrinho de Compras" />
-          <img className='h-5.5'  onClick={() => navigate("/liked")}  src={Heart} alt="Carrinho de Compras" />
+          <img  onClick={() => navigate ("/sacola")} src={Bag} alt="Carrinho de Compras" />
+          <img className='h-5.5' onClick={() => navigate("/liked")}  src={Heart} alt="Carrinho de Compras" />
         </div>
       </div>
 

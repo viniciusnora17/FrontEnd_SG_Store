@@ -34,7 +34,7 @@ const Card = ({ img, imgHover, title, price }) => {
 
   return (
     <div 
-      className="flex flex-col w-full sm:w-[45%] md:w-[30%] lg:w-[20%] relative"
+      className="flex flex-col w-full sm:w-[45%] md:w-[30%] lg:w-[20%] relative container-card"
       onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -75,7 +75,7 @@ const Card = ({ img, imgHover, title, price }) => {
 const Container = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-[95dvh] container-cards px-4">
-      <h2 className="w-full text-center products mb-12">novidades</h2>
+      <h2 className="w-full text-center products !mb-10">novidades</h2>
 
       <div className="flex flex-wrap justify-center gap-3 w-full max-w-full">
         <Card img={imgHome1} imgHover={imgHome1Hover} title="boné ugly people hate me" price="R$ 151,90"/>

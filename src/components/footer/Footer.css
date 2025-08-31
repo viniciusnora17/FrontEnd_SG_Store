@@ -5,7 +5,7 @@ footer{
 .hiperlink-footer{
     color: #fff;
     font-size: 0.9rem;
-    
+   
 }
 
 .copyright{
@@ -17,7 +17,7 @@ footer{
 }
 
 h3{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: rgb(255, 255, 255);
     font-weight: bolder;
 }
@@ -43,11 +43,40 @@ h3{
     width: 11%;
 }
 
+.hiperlink-footer:hover{
+    color: #6b7569;
+}
+
 @media(max-width: 425px){
     h3{
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        overflow: hidden;
     }
 
+    .footer{
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hiperlink-footer{
+        font-size: 0.82rem;
+    }
+
+    .container-payment{
+        margin: auto;
+        padding-left: 4%;
+        margin-top: 14px;
+    }
+    
+    .img-payment{
+        width: 37%;
+    }
+
+    .copyright{
+        text-align: center;
+        padding-left: 0;
+        font-size: 0.87rem;
+    }
    
 }
 

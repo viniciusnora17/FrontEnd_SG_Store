@@ -117,3 +117,8 @@
     background-color: #c7c9c6;
     border: 1px solid rgb(155, 154, 154);
 }
+
+.span-error{
+    font-size: 11px;
+    margin-top: -20px;
+}

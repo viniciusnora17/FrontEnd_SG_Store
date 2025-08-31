@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import './Carousel.css'
 
 const Carousel = ({ images, interval = 4000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +42,7 @@ const Carousel = ({ images, interval = 4000 }) => {
   }, [currentIndex]);
 
   return (
-    <div className="w-screen h-[95dvh] overflow-hidden relative">
+    <div className="w-screen h-[95dvh] !mt-10 overflow-hidden relative carousel">
       {/* Slides */}
       <div
         ref={slideRef}

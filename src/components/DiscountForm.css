@@ -3,7 +3,7 @@
 }
 
 .btn-discount{
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   width: 130px;
   height: 4vh;
   background-color: transparent;
@@ -21,7 +21,7 @@
 }
 
 #email{
-    border: 1px solid black;
+    border: 1px solid rgb(141, 141, 141);
     width: 40%;
     height: 4vh;
 }
@@ -37,4 +37,27 @@ form h2{
 
 .input{
   padding-left: 10px;
+}
+
+
+@media(max-width: 425px){
+  .privacy-politics{
+    text-align: left;
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  .text-discount{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  #email{
+    width: 60%;
+  }
+
+  .discount-text{
+    margin-top: 17px;
+  }
+
 }

@@ -5,7 +5,8 @@ import SobreNos from "./pages/Sobrenos";
 import ProductPage from "./pages/ProductPage";
 import Categoria from "./pages/Categoria";
 import Login from "./pages/Login";
-import Gostei from "./pages/Gostei" 
+import Gostei from "./pages/Gostei";
+import Sacola from "./pages/Bag";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/liked" element={<Gostei/>}/>
 
         <Route path="/login" element={<Login />} />
+       <Route path="/sacola" element={<Sacola />} />
+
 
       </Routes>
     </Router>

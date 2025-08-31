@@ -8,7 +8,7 @@
     margin-top: 3%;
 }
 
-.line{
+.line-product{
     width: 85%;
     background-color: rgb(204, 212, 212);
     height: 1px;
@@ -95,4 +95,37 @@
   padding: 4px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+@media(max-width: 425px){
+  .img-buy{
+    margin-top: 120px;
+    width: 70%;
+    height: 70vh;
+  }
+
+  .container-product{
+    flex-direction: column;
+    height: 110vh;
+  }
+}
+
+@media(max-width: 375px){
+  .img-buy{
+    width: 85%;
+  }
+
+  .text-buy{
+    padding-left: 20px;
+  }
+
+  .container-product{
+    height: 115vh;
+  }
+}
+
+@media(max-width: 320px){
+  .img-buy{
+    height: 60vh;
+  }
 }

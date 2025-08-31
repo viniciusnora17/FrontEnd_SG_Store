@@ -1,0 +1,18 @@
+.my-liked{
+    font-weight: 300;
+    overflow: hidden;
+    font-size: 2rem;
+    color: #353835;
+    
+    margin-top: 25px;
+    width: 18%;
+    text-align: right;
+}
+
+.line{
+    width: 78%;
+    height: 1px;
+    margin: auto;
+    margin-top: 1%;
+    background-color: rgb(204, 204, 204);
+}

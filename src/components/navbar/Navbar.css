@@ -90,4 +90,37 @@ ul li{
   width: 8%;
 }
 
+@media(max-width: 425px){
+    .navbar{
+      padding: 0;
+    }
 
+    .user-area{
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .my-account{
+      width: 40%;
+    }
+
+    .shop-cart{
+      width: 32%;
+    }
+
+    .shop-cart img{
+      width: 30px;
+    }
+
+    .logo{
+      width: 85px;
+    }
+
+    .search-box input{
+      display: none;
+    }
+
+    .dropdown-title, .my-account a{
+      font-size: 15px !important;
+    }
+}

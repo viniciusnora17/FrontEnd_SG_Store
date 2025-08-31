@@ -1,4 +1,12 @@
-.btn-slider{
-    background-color: green;
-    width: 100px;
+@media(max-width: 425px){
+    .carousel{
+        height: 60vh !important;
+        margin-top: 10%;
+    }
+
+    .absolute{
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
 }
