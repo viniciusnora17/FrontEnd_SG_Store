@@ -27,9 +27,18 @@ function Bag() {
           </p>
         )}
         <div className="flex items-center justify-center">
-            <button className="">
-                veja os produtos
-            </button>
+             <p style={{
+            textAlign: "center",
+            color: "#777",
+            fontSize: "22px",
+            fontWeight: "300",
+          }}>
+            não sabe oque escolher? de uma olhada nos nossos produtos :)
+          </p>
+        </div>
+        
+        <div className="flex items-center justify-center ">
+          <button className="btn-bag">ver produtos</button>
         </div>
       </div>
       <Footer />

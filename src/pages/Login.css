@@ -122,3 +122,23 @@
     font-size: 11px;
     margin-top: -20px;
 }
+
+@media(max-width: 425px){
+    .container-login{
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
+    .line-login{
+        height: 1px;
+        width: 90%;
+    }
+
+    .form-login{
+        width: 80%;
+    }
+
+    .container-create-account{
+        height: 30%;
+    }
+}

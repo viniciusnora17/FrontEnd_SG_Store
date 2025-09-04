@@ -1,50 +1,93 @@
-import React from 'react'
+
 import './Footer.css'
 import imgLogo from '../../assets/sg-logo.jpg'
-import visa from '../../payments-img/visabanner.jpg'
-import pix from '../../payments-img/pixbanner.png'
-import mastercard from '../../payments-img/mastercardbanner.jpg'
-import imgs from '../../payments-img/imgs-payment.png'
+import Visa from '../../payments-img/visa.png'
+import MasterCard from '../../payments-img/mastercard.png'
+import Elo from '../../payments-img/elo.png'
+import { SiPix } from "react-icons/si";
+
+
+import React, { useState } from 'react'
 
 const Footer = () => {
+
+     const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+
   return (
-    <footer className="">
-        <div className='flex justify-evenly items-center h-auto w-[70%] !pt-5 footer'>
+    <footer>
+      <div className="flex justify-evenly items-center h-auto w-[70%] !pt-5 footer footer-container">
 
-            <div className='flex flex-col items-start justify-evenly h-auto gap-1'>
-                <h3 className='!font-light'>nossas páginas</h3>
-                <a className='hiperlink-footer' href="">home</a>
-                <a className='hiperlink-footer' href="">minha conta</a>
-                <a className='hiperlink-footer' href="">carrinho</a>
-                <a className='hiperlink-footer' href="">meus likes</a>
-            </div>
-
-
-             <div className='flex flex-col items-start justify-evenly h-auto gap-1'>
-                <h3 className='!font-light'>termos e suporte</h3>
-                <a className='hiperlink-footer' href="">politicas e trocas</a>
-                <a className='hiperlink-footer' href="">ajuda</a>
-                <a className='hiperlink-footer' href="">trocar ou devolver peça</a>
-                <a className='hiperlink-footer' href="">política de privacidade</a>
-            </div>
-
-            <div className='flex flex-col items-start justify-evenly h-auto gap-1'>
-                <h3 className='!font-light'>entre em contato</h3>
-                <a className='hiperlink-footer' href="">instagram</a>
-                <a className='hiperlink-footer' href="">whatsapp</a>
-                <a className='hiperlink-footer' href="">+55 19 99999-9999</a>
-                <a className='hiperlink-footer' href="">+55 19 99999-9999</a>
-            </div>
-
+        {/* Nossas páginas */}
+        <div className="footer-section">
+          <h3 
+            className="!font-light footer-title"
+            onClick={() => toggleSection("paginas")}
+          >
+            nossas páginas
+          </h3>
+          <div className={`footer-links ${openSection === "paginas" ? "open" : ""}`}>
+            <a className="hiperlink-footer" href="">home</a>
+            <a className="hiperlink-footer" href="">minha conta</a>
+            <a className="hiperlink-footer" href="">carrinho</a>
+            <a className="hiperlink-footer" href="">meus likes</a>
+          </div>
         </div>
 
-        <div className='container-payment'>
-            <p className='payments !font-light'>meios de pagamento</p>
-                <img className='img-payment' src={imgs} alt="" />
+        {/* Termos e suporte */}
+        <div className="footer-section">
+          <h3 
+            className="!font-light footer-title"
+            onClick={() => toggleSection("termos")}
+          >
+            termos e suporte
+          </h3>
+          <div className={`footer-links ${openSection === "termos" ? "open" : ""}`}>
+            <a className="hiperlink-footer" href="">politicas e trocas</a>
+            <a className="hiperlink-footer" href="">ajuda</a>
+            <a className="hiperlink-footer" href="">trocar ou devolver peça</a>
+            <a className="hiperlink-footer" href="">política de privacidade</a>
+          </div>
         </div>
 
-        <p className='copyright'>© 2025 SG Store. Todos os direitos reservados • Desenvolvido por <a className='us' href="https://www.linkedin.com/in/viniciusnora/" target='blank'>Vinícius Nora</a> e <a className='us' href="https://www.linkedin.com/in/enzo-miquelini/" target='blank'>Enzo Miquelini</a></p>
-      
+        {/* Entre em contato */}
+        <div className="footer-section">
+          <h3 
+            className="!font-light footer-title"
+            onClick={() => toggleSection("contato")}
+          >
+            entre em contato
+          </h3>
+          <div className={`footer-links ${openSection === "contato" ? "open" : ""}`}>
+            <a className="hiperlink-footer" href="">instagram</a>
+            <a className="hiperlink-footer" href="">whatsapp</a>
+            <a className="hiperlink-footer" href="">+55 19 99999-9999</a>
+            <a className="hiperlink-footer" href="">+55 19 99999-9999</a>
+          </div>
+        </div>
+      </div>
+
+      {/* pagamentos */}
+      <div className="container-payment !mt-6 !mb-5">
+        <p className="payments !font-light">meios de pagamento</p>
+            <div className='flex items-center gap-2 !ml-3'>
+                <li><img src={Visa} alt="" /></li>
+                <li><img src={MasterCard} alt="" /></li>
+                <li><SiPix size={20} color="#00B2A9" /></li>
+                 <li className='w-5'><img src={Elo} alt="" /></li>
+           
+            </div>
+        {/* <img className="img-payment" src={imgs} alt="" /> */}
+      </div>
+
+      <p className="copyright">
+        © 2025 SG Store. Todos os direitos reservados • Desenvolvido por 
+        <a className="us" href="https://www.linkedin.com/in/viniciusnora/" target="blank"> Vinícius Nora</a> e 
+        <a className="us" href="https://www.linkedin.com/in/enzo-miquelini/" target="blank"> Enzo Miquelini</a>
+      </p>
     </footer>
   );
 };

@@ -84,7 +84,7 @@ const Container = () => {
         <Card img={imgHome4} imgHover={imgHome4Hover} title="vestido tule curto emma" price="R$ 359,90" />
       </div>
 
-      <button className="btn">ver mais</button> 
+      <button className="btn !mb-18">ver mais</button> 
     </div>
   );
 };

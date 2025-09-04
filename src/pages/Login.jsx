@@ -64,7 +64,7 @@ const handleSubmit = (e) => {
         <Dropdown />
       </div>
 
-      <div className="flex items-center justify-evenly h-[100vh] ">
+      <div className="flex items-center justify-evenly h-[100vh] container-login">
         <form className="form-login overflow-hidden" action="">
           <h2 className="subtitle-access overflow-hidden">acessar minha conta</h2>
 
@@ -98,7 +98,7 @@ const handleSubmit = (e) => {
 
         <div className="line-login"></div>
 
-        <div className="flex flex-col h-[50%] justify-center gap-6">
+        <div className="flex flex-col h-[50%] justify-center gap-6 container-create-account">
           <h2 className="subtitle-login">não possui uma conta?</h2>
           <div className="text-gray-600">
             <p>-crie sua conta para ficar por dentro de novidades</p>
