@@ -4,6 +4,7 @@ import sgLogo from '../../assets/sg-logo.jpg';
 import shoppingCart from '../../icons/shopping-cart.png';
 import magnifyingGlass from '../../icons/magnifying-glass.png';
 import Bag from '../../icons/shopping-bag.png';
+import User from '../../icons/people.png';
 import Heart from '../../icons/heart.png';
 import { Link, useNavigate } from "react-router-dom";
 
@@ -14,13 +15,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='user-area'>
-        <div className='my-account'>
-           <Link to="/login">entrar</Link>
-        </div>
-        <div className='shop-cart cursor-pointer'>
-          <img  onClick={() => navigate ("/sacola")} src={Bag} alt="Carrinho de Compras" />
-          <img className='h-5.5' onClick={() => navigate("/liked")}  src={Heart} alt="Carrinho de Compras" />
-        </div>
+        <Link className='hiperlink'>coleções</Link>
+        <Link className='hiperlink'>roupas</Link>
+        <Link className='hiperlink'>acessórios</Link>
+        <Link className='hiperlink'>sobre nós</Link>
       </div>
 
       {/* Logo clicável que vai para a Home */}
@@ -29,10 +27,10 @@ const Navbar = () => {
       </Link>
 
       <div className='navbar-links'>
-        <div className='search-box'>
-          <input type="text" placeholder='Buscar' />
-          <img src={magnifyingGlass} alt="Lupa" />
-        </div>
+        <img className='cursor-pointer' src={magnifyingGlass} alt="Lupa" />
+        <img className='cursor-pointer'  onClick={() => navigate ("/sacola")} src={Bag} alt="Carrinho de Compras" />
+        {/* <img className='h-5.6 cursor-pointer' onClick={() => navigate("/liked")}  src={Heart} alt="Carrinho de Compras" /> */}
+        <Link to="/login"> <img className='cursor-pointer' src={User} alt="Lupa" /></Link>
       </div>
     </div>
   );

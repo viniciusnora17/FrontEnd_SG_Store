@@ -43,7 +43,8 @@
 .products{
   font-size: 3.6rem;
   color: #758573;
-  font-weight: 300;
+  font-weight: 200;
+  margin-top: 50px;
 }
 
 @media(max-width: 425px){

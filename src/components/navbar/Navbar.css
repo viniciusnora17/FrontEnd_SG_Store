@@ -1,15 +1,12 @@
 
-
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: #A3BC9F;
-  padding: 0 15rem;
+
 }
-
-
 
 ul{
     flex: 1;
@@ -26,68 +23,23 @@ ul li{
     cursor: pointer;
 }
 
-.search-box {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 5px;
-  width: 100%;
-  max-width: 300px;
-}
-
-.search-box input {
-  border: none;
-  outline: none;
-  flex: 1;
-  font-size: 14px;
-  color: #333;
-  padding-left: 5%;
-  background-color: transparent;
-}
-
-.search-box input::placeholder {
-  color: #ffffff;
-  font-weight: 300;
-}
-
-
-.search-box img {
-  margin-left: 8px;
-  cursor: pointer;
-}
-
-
 .navbar-links {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  width: 15%;
+  align-items: center;
+  gap: 30px;
+}
+
+.hiperlink:hover{
+  color:#717e6f
 }
 
 .user-area {
   display: flex;
-  flex: 1;
-}
-
-.my-account{
-  width: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-  color: #fff;
-  /* font-weight: 400; */
-}
-
-.my-account:hover{
-  text-decoration: underline;
-}
-
-.shop-cart{
-  display: flex;
-  align-items: center;
+  width: 15%;
   justify-content: space-between;
-  gap: 10px;
-  width: 8%;
+  color: #fff;
+  font-weight: 300;
 }
 
 @media(max-width: 425px){

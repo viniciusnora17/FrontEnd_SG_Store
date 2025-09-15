@@ -1,57 +1,52 @@
-import React from "react";
-import imgJeans from "../assets/destaques-img.jpg";
-import imgGrafica from "../assets/destaques-img2.jpg";
-import './Destaques.css';
+import React from 'react';
+import styled from 'styled-components';
 
-const Destaques = () => {
+const Card = () => {
   return (
-    
-    <section className="w-full flex-wrap h-auto bg-[#F4F4F4] flex justify-center items-center overflow-hidden container-destaques">
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        
-        {/* Card 1 */}
-        <div className="relative overflow-hidden h-[770px] w-[750px] div-destaques">
-          <img
-            src={imgJeans}
-            alt="Modelos usando jeans"
-            className="w-full h-full object-cover object-center container-img-destaques"
-          />
-          <div className="absolute bottom-6 left-6 text-white max-w-[80%]">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              love them shawty
-            </h2>
-            <p className="text-sm md:text-base !mb-2">
-              SE VOCÊ USA JEANS, VOCÊ SABE
-            </p>
-            <button className="btn-destaque">
-              Compre Agora
-            </button>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="relative overflow-hidden h-[770px] div-destaques">
-          <img
-            src={imgGrafica}
-            alt="Camisetas gráficas"
-            className="w-full h-full object-cover object-center container-img-destaques"
-          />
-          <div className="absolute bottom-6 left-6 text-white max-w-[80%]">
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              monte seu look
-            </h2>
-            <p className="text-sm md:text-base !mb-2">
-              DIGA SIM PARA NOVAS GRÁFICAS
-            </p>
-            <button className="btn-destaque">
-              Compre Camisetas Gráficas
-            </button>
-          </div>
-        </div>
-
+    <StyledWrapper className='flex items-center justify-center h-[60dvh] bg-[#F4F4F4] gap-10'>
+      <div className="card overflow-hidden">
+        <img className='h-auto' src="https://adaptive-images.uooucdn.com.br/ik-seo/tr:w-1100,h-1594,c-at_max,pr-true,q-80/a22314-ogxys3oyrt0/pv/cd/74/59/15f8d91e7d5fcd6e797344a758/vestido-coastal-off-white-mundo-lolita-large-2.jpg" alt="" />
       </div>
-    </section>
-  );
-};
 
-export default Destaques;
+       <div className="card overflow-hidden">
+        <img src="https://adaptive-images.uooucdn.com.br/ik-seo/tr:w-700,h-1050,fo-custom,e-sharpen,pr-true,pr-true,q-88/a22314-ogxys3oyrt0/pv/2f/30/c1/4dddcaf45e0bc39b49bb39c13a/bone-vermelho-latinas-do-it-better-mundo-lolita-2.jpg" alt="" />
+        </div>
+
+       <div className="card overflow-hidden">
+        <img src="https://adaptive-images.uooucdn.com.br/ik-seo/tr:w-700,h-1050,fo-custom,e-sharpen,pr-true,pr-true,q-88/a22314-ogxys3oyrt0/pv/84/1c/f3/d8569f013de6489929fa6f45e0/vestido-fenda-off-white-amuleto-mundo-lolita-2.jpg" alt="" />
+      </div>
+    </StyledWrapper>
+  );
+}
+
+const StyledWrapper = styled.div`
+  .card {
+    box-sizing: border-box;
+    width: 26%;
+    height: 55dvh;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    
+    backdrop-filter: blur(6px);
+    
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+  }
+
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }`;
+
+export default Card;
