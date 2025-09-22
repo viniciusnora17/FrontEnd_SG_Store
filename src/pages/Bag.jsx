@@ -9,7 +9,7 @@ function Bag() {
   return (
     <>
       <Navbar />
-      <Dropdown/>
+      
 
       <div className="h-[70dvh]">
           <h2 className="my-liked">sua sacola</h2>

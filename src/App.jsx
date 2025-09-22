@@ -7,6 +7,7 @@ import Categoria from "./pages/Categoria";
 import Login from "./pages/Login";
 import Gostei from "./pages/Gostei";
 import Sacola from "./pages/Bag";
+import Clothes from "./pages/Clothes"
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/liked" element={<Gostei/>}/>
 
         <Route path="/login" element={<Login />} />
-       <Route path="/sacola" element={<Sacola />} />
+        <Route path="/sacola" element={<Sacola />} />
+        <Route path="/roupas" element={<Clothes />} />
 
 
       </Routes>

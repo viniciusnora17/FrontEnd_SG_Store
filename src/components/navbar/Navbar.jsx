@@ -16,12 +16,12 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='user-area'>
         <Link className='hiperlink'>coleções</Link>
-        <Link className='hiperlink'>roupas</Link>
+        <Link to="/roupas" className='hiperlink'>roupas</Link>
         <Link className='hiperlink'>acessórios</Link>
         <Link className='hiperlink'>sobre nós</Link>
       </div>
 
-      {/* Logo clicável que vai para a Home */}
+   
       <Link to="/">
         <img src={sgLogo} alt="SG Logo" className='logo cursor-pointer  w-[110px] max-[425px]:w-[100px]'/>
       </Link>

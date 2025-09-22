@@ -61,7 +61,6 @@ const handleSubmit = (e) => {
     <>
       <div className="navbar-container-fixed">
         <Navbar />
-        <Dropdown />
       </div>
 
       <div className="flex items-center justify-evenly h-[100vh] container-login">
