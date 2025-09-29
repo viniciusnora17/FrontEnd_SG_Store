@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='user-area'>
-        <Link className='hiperlink'>coleções</Link>
+        <Link to="/coleções" className='hiperlink'>coleções</Link>
         <Link to="/roupas" className='hiperlink'>roupas</Link>
         <Link className='hiperlink'>acessórios</Link>
         <Link className='hiperlink'>sobre nós</Link>

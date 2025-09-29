@@ -8,7 +8,7 @@ import imgHome2 from '../../src/section-home/img-home/img2.png';
 import imgHome2Hover from '../../src/section-home/img-home/img2-2.png';
 import imgHome3 from '../../src/section-home/img-home/img3.png';
 import imgHome3Hover from '../../src/section-home/img-home/img3-3.png';
-import imgHome4 from '../../src/section-home/img-home/img-4.png';
+import imgHome4 from '../../src/section-home/img-home/img4.png';
 import imgHome4Hover from '../../src/section-home/img-home/img4-4.png';
 
 import heartIcon from '../../src/icons/black-heart.png'; 

@@ -39,7 +39,7 @@ ul li{
   width: 15%;
   justify-content: space-between;
   color: #fff;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media(max-width: 425px){

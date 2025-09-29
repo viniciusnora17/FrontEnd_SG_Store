@@ -74,13 +74,11 @@ const Footer = () => {
       <div className="container-payment !mt-6 !mb-5">
         <p className="payments !font-light">meios de pagamento</p>
             <div className='flex items-center gap-2 !ml-3'>
-                <li><img src={Visa} alt="" /></li>
-                <li><img src={MasterCard} alt="" /></li>
-                <li><SiPix size={20} color="#00B2A9" /></li>
-                 <li className='w-5'><img src={Elo} alt="" /></li>
-           
+                <img src={Visa} alt="Visa Pagamento" />
+                <img src={MasterCard} alt="Mastercard Pagamento" />
+                <SiPix size={20} color="#00B2A9" alt="Pix pagamento"/>
+                <img src={Elo} alt='Elo pagamento' className='w-5'/>
             </div>
-        {/* <img className="img-payment" src={imgs} alt="" /> */}
       </div>
 
       <p className="copyright">

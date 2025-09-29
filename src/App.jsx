@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Gostei from "./pages/Gostei";
 import Sacola from "./pages/Bag";
 import Clothes from "./pages/Clothes"
+import Collection from "./pages/Collection"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/sacola" element={<Sacola />} />
         <Route path="/roupas" element={<Clothes />} />
+        <Route path="/coleções" element={<Collection />} />
 
 
       </Routes>
