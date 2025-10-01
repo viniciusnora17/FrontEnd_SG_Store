@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Navbar from '../components/navbar/Navbar';
-import Dropdown from '../components/navbar/Dropdown';
 import Footer from '../components/footer/Footer';
 import './Login.css';
 import Google from "../icons/google.png";
@@ -9,53 +8,52 @@ import imgModal from "/img-modal.png";
 import GoogleGreen from "../icons/google-green.png"
 import AppleGreen from "../icons/apple-green.png"
 
+
+
 export default function Login() {
- const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [cpf, setCpf] = useState("");
   const [cpfError, setCpfError] = useState("");
-
   const [accepted, setAccepted] = useState(false);
   const [acceptError, setAcceptError] = useState("");
 
   const handleCpfChange = (e) => {
-  let value = e.target.value.replace(/\D/g, ""); 
-  if (value.length > 11) value = value.slice(0, 11);
+    let value = e.target.value.replace(/\D/g, ""); 
+    if (value.length > 11) value = value.slice(0, 11);
 
-  value = value.replace(/(\d{3})(\d)/, "$1.$2");
-  value = value.replace(/(\d{3})(\d)/, "$1.$2");
-  value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    value = value.replace(/(\d{3})(\d)/, "$1.$2");
+    value = value.replace(/(\d{3})(\d)/, "$1.$2");
+    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
-  setCpf(value);
+    setCpf(value);
 
-  if (value.length === 14) {
-    setCpfError("");
-  } else {
-    setCpfError("Digite um CPF válido (000.000.000-00)");
-  }
-};
+    if (value.length === 14) {
+      setCpfError("");
+    } else {
+      setCpfError("Digite um CPF válido (000.000.000-00)");
+    }
+  };
 
-// ✅ Agora handleSubmit está fora
-const handleSubmit = (e) => {
-  e.preventDefault();
-  let valid = true;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let valid = true;
 
-  if (cpf.length !== 14) {
-    setCpfError("Digite um CPF válido (000.000.000-00)");
-    valid = false;
-  }
+    if (cpf.length !== 14) {
+      setCpfError("Digite um CPF válido (000.000.000-00)");
+      valid = false;
+    }
 
-  if (!accepted) {
-    setAcceptError("Você precisa aceitar os termos para continuar");
-    valid = false;
-  } else {
-    setAcceptError("");
-  }
+    if (!accepted) {
+      setAcceptError("Você precisa aceitar os termos para continuar");
+      valid = false;
+    } else {
+      setAcceptError("");
+    }
 
-  if (valid) {
-    alert("Cadastro realizado com sucesso!");
-  }
-};
-  
+    if (valid) {
+      alert("Cadastro realizado com sucesso!");
+    }
+  };
 
   return (
     <>
@@ -63,158 +61,56 @@ const handleSubmit = (e) => {
         <Navbar />
       </div>
 
-      <div className="flex items-center justify-evenly h-[100vh] container-login">
-        <form className="form-login overflow-hidden" action="">
-          <h2 className="subtitle-access overflow-hidden">acessar minha conta</h2>
-
-          <div className="flex flex-col justify-evenly w-full h-[53%]">
-            <div>
-              <label className="text-gray-700" htmlFor="">email</label>
-              <input className="input-login" type="email" />
-            </div>
-
-            <div>
-              <label className="text-gray-700" htmlFor="">senha</label>
-              <input className="input-login" type="password" />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between w-95 overflow-hidden">
-            <button className="btn-entrar">entrar</button>
-            <a className="underline" href="">esqueci minha senha</a>
-          </div>
-
-          <div className="flex items-center justify-around gap-20 w-[100%] btn-google">
-            <button type="button">entrar com sua conta google</button>
-            <img src={Google} alt="" />
-          </div>
-
-          <div className="flex items-center justify-around gap-20 w-[100%] btn-apple">
-            <button type="button">entrar com sua conta apple</button>
-            <img src={Apple} alt="" />
-          </div>
-        </form>
-
-        <div className="line-login"></div>
-
-        <div className="flex flex-col h-[50%] justify-center gap-6 container-create-account">
-          <h2 className="subtitle-login">não possui uma conta?</h2>
-          <div className="text-gray-600">
-            <p>-crie sua conta para ficar por dentro de novidades</p>
-            <p>-saiba de descontos</p>
-            <p>-fique por dentro de lançamentos</p>
-          </div>
-          <button
-            className="btn-entrar"
-            type="button"
-            onClick={() => setShowModal(true)}
-          >
-            criar conta
-          </button>
+<div className="w-[100%] flex justify-center items-center !p-20 !pt-40">
+      <form className="form_container">
+        <div className="title_container">
+          <p className="title">faça login na sua conta</p>
+          <span className="subtitle">Get started with our app, just create an account and enjoy the experience.</span>
         </div>
-      </div>
-
-      {/* Modal */}
-      {showModal && (
-        <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center !mt-10 !z-50"
-          onClick={() => setShowModal(false)} // clique no fundo fecha
-        >
-          <div
-            className="flex rounded-lg shadow-lg overflow-hidden"
-            onClick={(e) => e.stopPropagation()} // impede o fechamento ao clicar dentro
-          >
-            {/* Coluna da imagem */}
-            <div className="w-[400px] h-[65dvh]">
-              <img
-                src={imgModal}
-                alt="background"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Coluna do formulário */}
-            <div className="bg-[#F4F4F4] !p-10 w-[420px] h-[65dvh] flex flex-col">
-              <div className="flex items-center justify-center !mb-6">
-                <h2 className="text-5xl font-light overflow-hidden font-bold text-[#71836e]">
-                  criar conta
-                </h2>
-              </div>
-
-              <form className="flex flex-col gap-5 flex-1 ">
-                <input
-                  type="text"
-                  placeholder="Nome completo"
-                  className="input-login !p-2 shadow-lg"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="input-login !p-2 shadow-lg"
-                />
-                
-                {/* CPF formatado */}
-                <div className="flex flex-col overflow-hidden">
-                  <input
-                    type="text"
-                    placeholder="CPF"
-                    value={cpf}
-                    onChange={handleCpfChange}
-                    className={`input-login !p-2 shadow-lg ${cpfError ? "border-red-500" : ""}`}
-                  />
-                  {/* {cpfError && (
-                    <span className="text-red-500 text-sm !mt-1">{cpfError}</span>
-                  )} */}
-                </div>
-
-                <input
-                  type="password"
-                  placeholder="Senha"
-                  className="input-login !p-2 shadow-lg"
-                />
-
-                <div className="flex items-center justify-start gap-2">
-                  <input
-                    className="cursor-pointer"
-                    type="checkbox"
-                    name="aceito"
-                    id="aceito"
-                  />
-                    <label htmlFor="aceito" className="use-terms cursor-pointer">
-                    aceito termos e condições de uso
-                    </label>
-                </div>
-                    {acceptError && (
-                  <span className="text-red-500 text-sm  span-error">{acceptError}</span>
-                )}
-
-                <button type="submit"  onClick={handleSubmit} className="btn-modal">
-                  cadastrar-se →
-                </button>
-
-                <div className="line-container flex items-center justify-between">
-                  <div className="line-modal"></div>
-                  <span className="span">ou</span>
-                  <div className="line-modal"></div>
-                </div>
-
-                <div className="flex flex-col gap-5">
-                  <div className="btn-social">
-                    <img src={AppleGreen} alt="" />
-                    <p>crie sua conta com a apple</p>
-                  </div>
-
-                  <div className="btn-social">
-                    <img src={GoogleGreen} alt="" />
-                    <p>crie sua conta com google</p>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+        <br />
+        <div className="input_container">
+          <label className="input_label" htmlFor="email_field">email</label>
+  
+          <input placeholder="julia@gmail.com" title="Input title" name="input-name" type="text" className="input_field" id="email_field" />
         </div>
-)}
+        <div className="input_container">
+          <label className="input_label" htmlFor="password_field">senha</label>
+          
+          <input placeholder="senha" title="Input title" name="input-name" type="password" className="input_field" id="password_field" />
+        </div>
+        <button title="Sign In" type="submit" className="sign-in_btn">
+          <span>entrar</span>
+        </button>
 
+        <div className="separator">
+          <span>ou</span>
+        </div>
+        <button title="Sign In" type="submit" className="sign-in_ggl">
+          <svg height="18" width="18" viewBox="0 0 32 32" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <path d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" id="A"></path>
+            </defs>
+            <clipPath id="B"></clipPath>
+            <g transform="matrix(.727273 0 0 .727273 -.954545 -1.45455)">
+              <path fill="#fbbc05" clipPath="url(#B)" d="M0 37V11l17 13z"></path>
+              <path fill="#ea4335" clipPath="url(#B)" d="M0 11l17 13 7-6.1L48 14V0H0z"></path>
+              <path fill="#34a853" clipPath="url(#B)" d="M0 37l30-23 7.9 1L48 0v48H0z"></path>
+              <path fill="#4285f4" clipPath="url(#B)" d="M48 48L17 24l-4-3 35-10z"></path>
+            </g>
+          </svg>
+          <span>entre com o google</span>
+        </button>
+        <button title="Sign In" type="submit" className="sign-in_apl">
+          <svg preserveAspectRatio="xMidYMid" version="1.1" viewBox="0 0 256 315" height="20px" width="16px" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path fill="#ffffff" d="M213.803394,167.030943 C214.2452,214.609646 255.542482,230.442639 256,230.644727 C255.650812,231.761357 249.401383,253.208293 234.24263,275.361446 C221.138555,294.513969 207.538253,313.596333 186.113759,313.991545 C165.062051,314.379442 158.292752,301.507828 134.22469,301.507828 C110.163898,301.507828 102.642899,313.596301 82.7151126,314.379442 C62.0350407,315.16201 46.2873831,293.668525 33.0744079,274.586162 C6.07529317,235.552544 -14.5576169,164.286328 13.147166,116.18047 C26.9103111,92.2909053 51.5060917,77.1630356 78.2026125,76.7751096 C98.5099145,76.3877456 117.677594,90.4371851 130.091705,90.4371851 C142.497945,90.4371851 165.790755,73.5415029 190.277627,76.0228474 C200.528668,76.4495055 229.303509,80.1636878 247.780625,107.209389 C246.291825,108.132333 213.44635,127.253405 213.803394,167.030988 M174.239142,50.1987033 C185.218331,36.9088319 192.607958,18.4081019 190.591988,0 C174.766312,0.636050225 155.629514,10.5457909 144.278109,23.8283506 C134.10507,35.5906758 125.195775,54.4170275 127.599657,72.4607932 C145.239231,73.8255433 163.259413,63.4970262 174.239142,50.1987249"></path>
+            </g>
+          </svg>
+          <span>entre com a apple</span>
+        </button>
+        <p className="note">termos de uso &amp; condições</p>
+      </form>
+</div>
 
 
       <Footer />

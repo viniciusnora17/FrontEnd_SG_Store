@@ -187,7 +187,9 @@ const Container = () => {
             />
           ))
         ) : (
-          <p className="text-gray-500">Nenhum produto encontrado</p>
+          <div className='h-[36.3dvh] flex justify-center items-center'>
+            <p className="text-gray-500 text-3xl font-light">Nenhum produto encontrado</p>
+          </div>
         )}
       </div>
 
