@@ -5,22 +5,34 @@ import Footer from '../components/footer/Footer'
 import './Clothes.css';
 
 
-import imgHome1 from '../../src/section-home/img-home/img1.png';
-import imgHome1Hover from '../../src/section-home/img-home/img1-1.png';
+import imgHome11 from '../../src/section-home/img-home/img11.png';
+import imgHome11Hover from '../../src/section-home/img-home/img11-11.png';
 import imgHome2 from '../../src/section-home/img-home/img2.png';
 import imgHome2Hover from '../../src/section-home/img-home/img2-2.png';
-import imgHome3 from '../../src/section-home/img-home/img3.png';
-import imgHome3Hover from '../../src/section-home/img-home/img3-3.png';
-import imgHome4 from '../../src/section-home/img-home/img4.png';
-import imgHome4Hover from '../../src/section-home/img-home/img4-4.png';
+import imgHome9 from '../../src/section-home/img-home/img9.png';
+import imgHome9Hover from '../../src/section-home/img-home/img9-9.png';
+import imgHome10 from '../../src/section-home/img-home/img10.png';
+import imgHome10Hover from '../../src/section-home/img-home/img10-10.png';
 import imgHome5 from '../../src/section-home/img-home/img5.png';
 import imgHome5Hover from '../../src/section-home/img-home/img5-5.png';
 import imgHome6 from '../../src/section-home/img-home/img6.png';
 import imgHome6Hover from '../../src/section-home/img-home/img6-6.png';
 import imgHome7 from '../../src/section-home/img-home/img7.png';
 import imgHome7Hover from '../../src/section-home/img-home/img7-7.png';
-import imgHome8 from '../../src/section-home/img-home/img8.png';         // CORREÇÃO: era imgHom8
+import imgHome8 from '../../src/section-home/img-home/img8.png'; 
 import imgHome8Hover from '../../src/section-home/img-home/img8-8.jpg';
+
+import imgHome12 from '../../src/section-home/img-home/img12.png'; 
+import imgHome12Hover from '../../src/section-home/img-home/img12-12.png';
+
+import imgHome13 from '../../src/section-home/img-home/img13.png'; 
+import imgHome13Hover from '../../src/section-home/img-home/img13-13.png';
+
+import imgHome14 from '../../src/section-home/img-home/img14.png'; 
+import imgHome14Hover from '../../src/section-home/img-home/img14-14.png';
+
+import imgHome15 from '../../src/section-home/img-home/img15.jpg'; 
+import imgHome15Hover from '../../src/section-home/img-home/img15-15.jpg';
 
 import heartIcon from '../../src/icons/black-heart.png'; 
 import heartIconFill from '../../src/icons/black-heart-fill.png';
@@ -32,6 +44,10 @@ const Card = ({ img, imgHover, title, price }) => {
   const [hovered, setHovered] = useState(false);
   const [favorited, setFavorited] = useState(false);
   const navigate = useNavigate();
+
+
+  const priceNumber = parseFloat(price.replace("R$", "").replace(",", "."));
+  const installmentValue = priceNumber / 4;
 
   const handleClick = () => {
     navigate("/produto", {
@@ -77,6 +93,9 @@ const Card = ({ img, imgHover, title, price }) => {
       <div className="p-2">
         <p>{title}</p>
         <p>{price}</p>
+        <p className="text-sm text-black-600">
+          4x de R$ <b>{installmentValue.toFixed(2).replace(".", ",")}</b> sem juros
+        </p>
       </div>
     </div>
   );
@@ -91,14 +110,18 @@ const Container = () => {
 
   // LISTA DE PRODUTOS
   const products = [
-    { id: 1, img: imgHome1, imgHover: imgHome1Hover, title: "boné ugly people hate me", price: 151.90, category: "acessórios", size: "M" },
+    { id: 1, img: imgHome11, imgHover: imgHome11Hover, title: "camiseta long time lovers", price: 151.90, category: "camisetas", size: "M" },
     { id: 2, img: imgHome2, imgHover: imgHome2Hover, title: "body mademoiselle preto", price: 359.90, category: "body", size: "P" },
-    { id: 3, img: imgHome3, imgHover: imgHome3Hover, title: "vestido nightfall preto", price: 359.90, category: "vestidos", size: "M" },
-    { id: 4, img: imgHome4, imgHover: imgHome4Hover, title: "vestido tule curto emma", price: 329.90, category: "vestidos", size: "G" },
+    { id: 3, img: imgHome9, imgHover: imgHome9Hover, title: "cropped whiteoff", price: 359.90, category: "cropped", size: "M" },
+    { id: 4, img: imgHome10, imgHover: imgHome10Hover, title: "short curto savannah", price: 329.90, category: "shorts", size: "G" },
     { id: 5, img: imgHome5, imgHover: imgHome5Hover, title: "calça my yellow house", price: 249.90, category: "calças", size: "M" },
     { id: 6, img: imgHome6, imgHover: imgHome6Hover, title: "calça mademoiselle preta", price: 409.90, category: "calças", size: "G" },
     { id: 7, img: imgHome7, imgHover: imgHome7Hover, title: "saia brown schedle", price: 129.90, category: "saias", size: "P" },
     { id: 8, img: imgHome8, imgHover: imgHome8Hover, title: "tricô brighter", price: 189.90, category: "tricôs", size: "GG" },
+    { id: 9, img: imgHome12, imgHover: imgHome12Hover, title: "camiseta cat mom social", price: 189.90, category: "camisetas", size: "GG" },
+    { id: 10, img: imgHome13, imgHover: imgHome13Hover, title: "shorts tricô sunny", price: 259.90, category: "tricôs", size: "GG" },
+    { id: 11, img: imgHome14, imgHover: imgHome14Hover, title: "short grayday", price: 139.90, category: "shorts", size: "GG" },
+    { id: 12, img: imgHome15, imgHover: imgHome15Hover, title: "calça alfaiataria urban", price: 320.00, category: "calças", size: "GG" },
   ];
 
   // FILTRAGEM
@@ -124,58 +147,26 @@ const Container = () => {
       <Navbar/>
 
       <div className='bg-[#F4F4F4]'>
-        <h2 className="text-clothes">roupas</h2>
+        <h2 className="text-clothes flex justify-center items-center">roupas</h2>
       </div>
 
       {/* FILTROS */}
-      <div className='flex items-center gap-8 !pt-10 !pl-53 bg-[#F4F4F4]'>
-        <div>
-          <select
-            className="btn-clothes cursor-pointer"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            <option value="">categorias</option>
-            <option value="acessórios">acessórios</option>
-            <option value="body">body</option>
-            <option value="vestidos">vestidos</option>
-            <option value="calças">calças</option>
-            <option value="saias">saias</option>
-            <option value="tricôs">tricôs</option>
-          </select>
+       <div className='flex items-center justify-center gap-8 !pt-10 bg-[#F4F4F4]'>
+          {["camisetas", "tricôs", "calças", "bodys", "saias", "cropped", "shorts"].map((cat) => (
+            <button
+              key={cat}
+              className={`hiperlink-filter ${
+                selectedCategory === cat ? "text-black font-medium" : "text-gray-500"
+              }`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
-
-        <div>
-          <select
-            className="btn-clothes cursor-pointer"
-            value={selectedPrice}
-            onChange={(e) => setSelectedPrice(e.target.value)}
-          >
-            <option value="">preço</option>
-            <option value="0-100">até R$100</option>
-            <option value="100-200">R$100 - R$200</option>
-            <option value="200-400">R$200 - R$400</option>
-            <option value="400+">acima de R$400</option>
-          </select>
-        </div>
-
-        <div>
-          <select
-            className="btn-clothes cursor-pointer"
-            value={selectedSize}
-            onChange={(e) => setSelectedSize(e.target.value)}
-          >
-            <option value="">tamanho</option>
-            <option value="P">p</option>
-            <option value="M">m</option>
-            <option value="G">g</option>
-            <option value="GG">gg</option>
-          </select>
-        </div>
-      </div>
 
       {/* CARDS */}
-      <div className="flex flex-wrap justify-center gap-9 w-full max-w-full !pt-10 !pb-12 bg-[#F4F4F4]">
+      <div className="flex flex-wrap justify-center gap-9 w-full max-w-full !pt-10 !pb-12 cursor-pointer bg-[#F4F4F4]">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((p) => (
             <Card 
@@ -189,7 +180,7 @@ const Container = () => {
         ) : (
           <div className='h-[36.3dvh] flex justify-center items-center'>
             <p className="text-gray-500 text-3xl font-light">Nenhum produto encontrado</p>
-          </div>
+          </div>  
         )}
       </div>
 

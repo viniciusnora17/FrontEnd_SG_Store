@@ -65,7 +65,7 @@ export default function Login() {
       <form className="form_container">
         <div className="title_container">
           <p className="title">faça login na sua conta</p>
-          <span className="subtitle">Get started with our app, just create an account and enjoy the experience.</span>
+          <span className="subtitle">entre e aproveite descontos exclusivos para uma melhor experiência na SG Store</span>
         </div>
         <br />
         <div className="input_container">
