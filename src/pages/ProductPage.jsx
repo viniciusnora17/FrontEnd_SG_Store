@@ -16,7 +16,7 @@ export default function ProductPage() {
       <>
          <div className="navbar-container-fixed">
           <Navbar />
-          <Dropdown />
+        
         </div>
       <div className="flex gap-14 items-center justify-center h-[95vh] bg-[#F4F4F4] container-product">
       <img src={state.img} alt={state.title} className="w-[23%] img-buy" />

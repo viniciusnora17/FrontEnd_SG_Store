@@ -1,0 +1,19 @@
+.text-clothes{
+    
+    font-weight: 200;
+    overflow: hidden;
+    font-size: 3.5rem;
+    color: #353835;
+    
+    margin-top: 25px;
+   
+    text-align: right;
+
+}
+
+.hiperlink-filter {
+  font-size: 16px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+

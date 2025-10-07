@@ -14,10 +14,12 @@ import imgHome4Hover from '../../src/section-home/img-home/img4-4.png';
 import heartIcon from '../../src/icons/black-heart.png'; 
 import heartIconFill from '../../src/icons/black-heart-fill.png';
 
+
+// ------------------- CARD -------------------
 const Card = ({ img, imgHover, title, price }) => {
   const [src, setSrc] = useState(img);
   const [hovered, setHovered] = useState(false);
-  const [favorited, setFavorited] = useState(false); // Novo estado
+  const [favorited, setFavorited] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -27,7 +29,7 @@ const Card = ({ img, imgHover, title, price }) => {
   };
 
   const handleFavoriteClick = (e) => {
-    e.stopPropagation(); // Impede navegação
+    e.stopPropagation();
     setFavorited(prev => !prev);
     console.log(`${title} ${!favorited ? 'adicionado aos' : 'removido dos'} favoritos!`);
   };
@@ -48,7 +50,6 @@ const Card = ({ img, imgHover, title, price }) => {
           onMouseLeave={() => setSrc(img)}
         />
 
-        {/* Ícone de coração só aparece no hover, mas mantém o preenchimento se favoritado */}
         {(hovered || favorited) && (
           <button 
             className="absolute top-3 right-3 bg-transparent cursor-pointer transition-all duration-300 ease-in-out hover:scale-110"
@@ -72,7 +73,14 @@ const Card = ({ img, imgHover, title, price }) => {
 };
 
 
+// ------------------- CONTAINER -------------------
 const Container = () => {
+  const navigate = useNavigate(); // 👈 Adicionado aqui
+
+  const handleVerMais = () => {
+    navigate("/roupas"); // 👈 Redireciona para a página de roupas
+  };
+
   return (
     <div className="flex flex-col justify-center items-center min-h-[95dvh] container-cards px-4">
       <h2 className="w-full text-center products !mb-10">novidades</h2>
@@ -84,7 +92,7 @@ const Container = () => {
         <Card img={imgHome4} imgHover={imgHome4Hover} title="vestido tule curto emma" price="R$ 359,90" />
       </div>
 
-      <button className="btn !mb-18">ver mais</button> 
+      <button className="btn !mb-18" onClick={handleVerMais}>ver mais</button> 
     </div>
   );
 };

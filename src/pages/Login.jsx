@@ -61,7 +61,7 @@ export default function Login() {
         <Navbar />
       </div>
 
-<div className="w-[100%] flex justify-center items-center !p-20 !pt-40">
+<div className="w-[100%] flex justify-evenly items-center !p-10 !pt-30">
       <form className="form_container">
         <div className="title_container">
           <p className="title">faça login na sua conta</p>
@@ -110,6 +110,18 @@ export default function Login() {
         </button>
         <p className="note">termos de uso &amp; condições</p>
       </form>
+
+      <div className="sign-up ">
+          <h2 className="title-signup">não tem conta?</h2>
+          <p className="text-signup">coloque seu e-mail e enviaremos um código de verificação para continuar o cadastro.</p>
+
+          <form action="" className="flex flex-col !pt-6">
+            <label htmlFor="email">email</label>
+            <input className="input-signup" type="text" />
+
+            <button className="btn-signup">enviar</button>
+          </form>
+      </div>
 </div>
 
 

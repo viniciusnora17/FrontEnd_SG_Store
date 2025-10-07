@@ -62,7 +62,7 @@ const Footer = () => {
             entre em contato
           </h3>
           <div className={`footer-links ${openSection === "contato" ? "open" : ""}`}>
-            <a className="hiperlink-footer" href="">instagram</a>
+            <a className="hiperlink-footer" href="https://www.instagram.com/use.sg.store/" target="_blank">instagram</a>
             <a className="hiperlink-footer" href="">whatsapp</a>
             <a className="hiperlink-footer" href="">+55 19 99999-9999</a>
             <a className="hiperlink-footer" href="">+55 19 99999-9999</a>

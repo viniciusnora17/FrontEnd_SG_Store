@@ -31,7 +31,12 @@ ul li{
 }
 
 .hiperlink:hover{
-  color:#717e6f
+  color:#717e6f;
+  transition: 500ms;
+}
+
+.hiperlink:not(:hover){
+  transition: 500ms;
 }
 
 .user-area {

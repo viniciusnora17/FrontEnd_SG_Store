@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className='user-area'>
         <Link to="/coleções" className='hiperlink'>coleções</Link>
         <Link to="/roupas" className='hiperlink'>roupas</Link>
-        <Link className='hiperlink'>acessórios</Link>
+        <Link to="/acessorios" className='hiperlink'>acessórios</Link>
         <Link className='hiperlink'>sobre nós</Link>
       </div>
 
