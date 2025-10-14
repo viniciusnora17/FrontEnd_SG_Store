@@ -134,6 +134,8 @@
   cursor: pointer;
 }
 
+
+
 .separator {
   width: 100%;
   display: flex;
@@ -206,4 +208,9 @@
   color: #444444;
   background-color: transparent;
   transition: 600ms;
+}
+
+.p-why{
+  font-size: 0.90rem;
+  color: #4b4b4d;
 }

@@ -66,7 +66,7 @@ const Card = ({ img, imgHover, title, price }) => {
 
       <div className="p-2">
         <p>{title}</p>
-        <p className='font-bold'>{price}</p>
+        <p>{price}</p>
       </div>
     </div>
   );
@@ -98,3 +98,4 @@ const Container = () => {
 };
 
 export default Container;
+ 

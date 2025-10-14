@@ -115,9 +115,16 @@ export default function Login() {
           <h2 className="title-signup">não tem conta?</h2>
           <p className="text-signup">coloque seu e-mail e enviaremos um código de verificação para continuar o cadastro.</p>
 
+          <div className="!mt-6">
+            <p className="p-why"><span className="text-[#92A590]">-</span>tenha acesso a ofertas exclusivas</p>
+            <p className="p-why"><span className="text-[#92A590]">-</span>finalize suas compras mais rápido</p>
+            <p className="p-why"><span className="text-[#92A590]">-</span>acompanhe seus pedidos com facilidade</p>
+          </div>
+          
+
           <form action="" className="flex flex-col !pt-6">
-            <label htmlFor="email">email</label>
-            <input className="input-signup" type="text" />
+            <label className="input_label" htmlFor="email">email</label>
+            <input className="input-signup" type="text" placeholder="julia@gmail.com" />
 
             <button className="btn-signup">enviar</button>
           </form>
