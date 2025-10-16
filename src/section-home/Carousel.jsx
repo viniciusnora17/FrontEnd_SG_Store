@@ -60,19 +60,24 @@ const Carousel = ({ images, interval = 4000 }) => {
       </div>
 
       {/* Botão Esquerda */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-3xl cursor-pointer "
-      >
-        &#10094;
-      </button>
+   <button
+  onClick={prevSlide}
+  className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent !text-black rounded-full w-10 h-10 flex items-center justify-center cursor-pointer button-carousel"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="">
+    <path d="M15 18l-6-6 6-6"/>
+  </svg>
+</button>
+
 
       {/* Botão Direita */}
       <button
         onClick={nextSlide}
-        className="absolute right-8 top-1/2 -translate-y-1/2 bg-white text-black  rounded-full w-10 h-10 flex items-center justify-center text-3xl cursor-pointer"
+        className="absolute right-8 top-1/2 -translate-y-1/2 bg-transparent text-white rounded-full w-10 h-10 flex items-center justify-center text-3xl cursor-pointer button-carousel"
       >
-        &#10095;
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-180">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
       </button>
     </div>
   );

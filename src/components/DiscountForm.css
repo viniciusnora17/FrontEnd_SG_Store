@@ -1,5 +1,8 @@
-.discount{
-    font-size: 2.3rem;
+
+
+.text-discount{
+  font-weight: 200;
+  font-size: 3.6rem;
 }
 
 .btn-discount{
@@ -8,7 +11,6 @@
   height: 4vh;
   background-color: transparent;
 
-  font-weight: bold;
 
   transition: background-color 0.4s ease, color 0.4s ease;
   cursor: pointer;
@@ -28,7 +30,7 @@
 
 form h2{
     font-size: 3rem;
-    text-align: center;
+    text-align: left;
 }
 
 .container-checkbox{
@@ -37,6 +39,71 @@ form h2{
 
 .input{
   padding-left: 10px;
+}
+
+form{
+  padding-left: 8%;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-content h3 {
+  color: #758573;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-close {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-close:hover {
+  background-color: black;
+  color: white;
+  transition: 600ms;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 

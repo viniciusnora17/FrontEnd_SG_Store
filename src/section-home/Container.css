@@ -9,7 +9,7 @@
   height: 5vh;
   background-color: transparent;
 
-  font-weight: bold;
+  
 
   transition: background-color 0.4s ease, color 0.4s ease;
   cursor: pointer;
@@ -41,7 +41,7 @@
 }
 
 .products{
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   color: #758573;
   font-weight: 200;
   margin-top: 50px;

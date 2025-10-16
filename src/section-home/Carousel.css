@@ -1,3 +1,14 @@
+.button-carousel {
+  background-color: transparent;
+ 
+}
+
+.button-carousel:hover {
+  background: linear-gradient(135deg, #798a78d3, #dce1dc96);
+transition:  600ms ;
+}
+
+
 @media(max-width: 425px){
     .carousel{
         height: 60vh !important;

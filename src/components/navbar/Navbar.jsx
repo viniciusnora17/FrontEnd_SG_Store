@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/coleções" className='hiperlink'>coleções</Link>
         <Link to="/roupas" className='hiperlink'>roupas</Link>
         <Link to="/acessorios" className='hiperlink'>acessórios</Link>
-        <Link className='hiperlink'>sobre nós</Link>
+        <Link to="/sobre-nos" className='hiperlink'>sobre nós</Link>
       </div>
 
    
@@ -27,10 +27,10 @@ const Navbar = () => {
       </Link>
 
       <div className='navbar-links'>
-        <img className='cursor-pointer' src={magnifyingGlass} alt="Lupa" />
+        <img className='cursor-pointer' onClick={() => navigate ("/liked")} src={Heart} alt="Heart" />
         <img className='cursor-pointer'  onClick={() => navigate ("/sacola")} src={Bag} alt="Carrinho de Compras" />
         {/* <img className='h-5.6 cursor-pointer' onClick={() => navigate("/liked")}  src={Heart} alt="Carrinho de Compras" /> */}
-        <Link to="/login"> <img className='cursor-pointer' src={User} alt="Lupa" /></Link>
+        <Link to="/login"> <img className='cursor-pointer' src={User} alt="Login" /></Link>
       </div>
     </div>
   );

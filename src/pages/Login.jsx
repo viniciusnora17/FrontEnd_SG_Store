@@ -108,7 +108,7 @@ export default function Login() {
           </svg>
           <span>entre com a apple</span>
         </button>
-        <p className="note">termos de uso &amp; condições</p>
+        <p className="note cursor-pointer">termos de uso &amp; condições</p>
       </form>
 
       <div className="sign-up ">

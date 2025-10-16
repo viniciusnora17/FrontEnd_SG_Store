@@ -47,6 +47,12 @@ ul li{
   font-weight: 400;
 }
 
+@media(max-width: 1366px){
+  .user-area{
+    width: 20%;
+  }
+}
+
 @media(max-width: 425px){
     .navbar{
       padding: 0;

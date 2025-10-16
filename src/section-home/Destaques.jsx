@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
   }
 
   .card:hover {
-    border: 1px solid black;
+    border: 3px solid #92A590;
     transform: scale(1.05);
   }
 
