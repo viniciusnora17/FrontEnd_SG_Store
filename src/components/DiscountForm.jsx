@@ -22,7 +22,7 @@ const DiscountForm = () => {
     <div className="bg-[#F4F4F4] h-[40dvh] flex items-center" id="container-discount">
       <form onSubmit={handleSubmit} className="w-full">
         <h2 className="text-[#758573] text-discount">
-          faça seu cadastro <br /> e ganhe um desconto na sua primeira compra
+          Faça seu cadastro e <br /> Ganhe um desconto na sua primeira compra
         </h2>
 
         <div className="flex gap-4">

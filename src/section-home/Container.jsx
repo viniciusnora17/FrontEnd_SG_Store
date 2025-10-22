@@ -22,9 +22,13 @@ const Card = ({ img, imgHover, title, price }) => {
   const [favorited, setFavorited] = useState(false);
   const navigate = useNavigate();
 
+  const priceNumber = parseFloat(price.replace("R$", "").replace(",", "."));
+  const installmentValue = priceNumber / 4;
+
+  
   const handleClick = () => {
     navigate("/produto", {
-      state: { img, title, price }
+      state: { img, imgHover, title, price }
     });
   };
 
@@ -83,7 +87,7 @@ const Container = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-[95dvh] container-cards px-4">
-      <h2 className="w-full text-center products !mb-10">novidades</h2>
+      <h2 className="w-full text-center products !mb-10">Novidades</h2>
 
       <div className="flex flex-wrap justify-center gap-3 w-full max-w-full">
         <Card img={imgHome1} imgHover={imgHome1Hover} title="boné ugly people hate me" price="R$ 151,90"/>

@@ -49,11 +49,11 @@ const Card = ({ img, imgHover, title, price }) => {
   const priceNumber = parseFloat(price.replace("R$", "").replace(",", "."));
   const installmentValue = priceNumber / 4;
 
-  const handleClick = () => {
-    navigate("/produto", {
-      state: { img, title, price }
-    });
-  };
+    const handleClick = () => {
+      navigate("/produto", {
+        state: { img, imgHover, title, price } 
+      });
+    };
 
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
@@ -110,18 +110,18 @@ const Container = () => {
 
   // LISTA DE PRODUTOS
   const products = [
-    { id: 1, img: imgHome11, imgHover: imgHome11Hover, title: "camiseta long time lovers", price: 151.90, category: "camisetas", size: "M" },
-    { id: 2, img: imgHome2, imgHover: imgHome2Hover, title: "body mademoiselle preto", price: 359.90, category: "body", size: "P" },
-    { id: 3, img: imgHome9, imgHover: imgHome9Hover, title: "cropped whiteoff", price: 359.90, category: "cropped", size: "M" },
-    { id: 4, img: imgHome10, imgHover: imgHome10Hover, title: "short curto savannah", price: 329.90, category: "shorts", size: "G" },
-    { id: 5, img: imgHome5, imgHover: imgHome5Hover, title: "calça my yellow house", price: 249.90, category: "calças", size: "M" },
-    { id: 6, img: imgHome6, imgHover: imgHome6Hover, title: "calça mademoiselle preta", price: 409.90, category: "calças", size: "G" },
-    { id: 7, img: imgHome7, imgHover: imgHome7Hover, title: "saia brown schedle", price: 129.90, category: "saias", size: "P" },
-    { id: 8, img: imgHome8, imgHover: imgHome8Hover, title: "tricô brighter", price: 189.90, category: "tricôs", size: "GG" },
-    { id: 9, img: imgHome12, imgHover: imgHome12Hover, title: "camiseta cat mom social", price: 189.90, category: "camisetas", size: "GG" },
-    { id: 10, img: imgHome13, imgHover: imgHome13Hover, title: "shorts tricô sunny", price: 259.90, category: "tricôs", size: "GG" },
-    { id: 11, img: imgHome14, imgHover: imgHome14Hover, title: "short grayday", price: 139.90, category: "shorts", size: "GG" },
-    { id: 12, img: imgHome15, imgHover: imgHome15Hover, title: "calça alfaiataria urban", price: 320.00, category: "calças", size: "GG" },
+    { id: 1, img: imgHome11, imgHover: imgHome11Hover, title: "Camiseta Long Time Lovers", price: 151.90, category: "Camisetas", size: "M" },
+    { id: 2, img: imgHome2, imgHover: imgHome2Hover, title: "Body Mademoiselle Preto", price: 359.90, category: "Body", size: "P" },
+    { id: 3, img: imgHome9, imgHover: imgHome9Hover, title: "Cropped Whiteoff", price: 359.90, category: "Cropped", size: "M" },
+    { id: 4, img: imgHome10, imgHover: imgHome10Hover, title: "Short Curto Savannah", price: 329.90, category: "Shorts", size: "G" },
+    { id: 5, img: imgHome5, imgHover: imgHome5Hover, title: "Calça My Yellow House", price: 249.90, category: "Calças", size: "M" },
+    { id: 6, img: imgHome6, imgHover: imgHome6Hover, title: "Calça Mademoiselle Preta", price: 409.90, category: "Calças", size: "G" },
+    { id: 7, img: imgHome7, imgHover: imgHome7Hover, title: "Saia Brown Schedle", price: 129.90, category: "Saias", size: "P" },
+    { id: 8, img: imgHome8, imgHover: imgHome8Hover, title: "Tricô Brighter", price: 189.90, category: "Tricôs", size: "GG" },
+    { id: 9, img: imgHome12, imgHover: imgHome12Hover, title: "Camiseta Cat Mom Social", price: 189.90, category: "Camisetas", size: "GG" },
+    { id: 10, img: imgHome13, imgHover: imgHome13Hover, title: "Shorts Tricô Sunny", price: 259.90, category: "Tricôs", size: "GG" },
+    { id: 11, img: imgHome14, imgHover: imgHome14Hover, title: "Short GrayDay", price: 139.90, category: "Shorts", size: "GG" },
+    { id: 12, img: imgHome15, imgHover: imgHome15Hover, title: "Calça Alfaiataria Urban", price: 320.00, category: "Calças", size: "GG" },
   ];
 
   // FILTRAGEM
@@ -147,13 +147,13 @@ const Container = () => {
       <Navbar/>
 
       <div className='bg-[#F4F4F4]'>
-        <h2 className="text-clothes flex justify-center items-center">roupas</h2>
+        <h2 className="text-clothes flex justify-center items-center">Roupas</h2>
       </div>
 
       {/* FILTROS */}
 
       <div className='flex items-center justify-center gap-8 !pt-10 bg-[#F4F4F4]'>
-        {["todos", "camisetas", "tricôs", "calças", "bodys", "saias", "cropped", "shorts"].map((cat) => (
+        {["Todos", "Camisetas", "Tricôs", "Calças", "Bodys", "Saias", "Cropped", "Shorts"].map((cat) => (
           <button
             key={cat}
             className={`hiperlink-filter transition-colors duration-300 ${
@@ -161,7 +161,7 @@ const Container = () => {
                 ? "text-black font-medium"
                 : "text-gray-500 hover:text-black"
             }`}
-            onClick={() => setSelectedCategory(cat === "todos" ? "" : cat)}
+            onClick={() => setSelectedCategory(cat === "Todos" ? "" : cat)}
           >
             {cat}
           </button>

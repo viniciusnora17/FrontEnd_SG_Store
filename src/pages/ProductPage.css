@@ -4,25 +4,26 @@
 }
 
 .price{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-top: 3%;
 }
 
 .line-product{
-    width: 85%;
+    width: 90%;
     background-color: rgb(204, 212, 212);
     height: 1px;
     margin-top: 5%;
+    
 }
 
 .card-payment{
-    font-size: 0.85rem;
-    margin-top: 5%;
+    font-size: 1rem;
+    margin-top: 3%;
     color: rgb(49, 49, 49);
 }
 
 .size-select{
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .size-select h3{
@@ -35,8 +36,8 @@
 }
 .size-option {
   border: 1px solid rgb(129, 128, 128);
-  width: 15%;
-  height: 5vh;
+  width: 12%;
+  height: 4.4vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,23 +63,23 @@
 }
 
 .cep{
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
 .cep input{
     border: 1px solid rgb(179, 177, 177);
     padding: 4px; 
-    width: 40%;
+    width: 45%;
 }
 
 .btn-buy{
-  margin-top: 10%;
+  margin-top: 3%;
   border: 1px solid black;
   width: 160px;
   height: 5vh;
   background-color: transparent;
 
-  font-weight: bold;
+
 
   transition: background-color 0.4s ease, color 0.4s ease;
   cursor: pointer;
@@ -96,6 +97,30 @@
   margin-left: 10px;
   cursor: pointer;
 }
+
+.cep-href{
+  font-size: 0.9rem;
+  color: #66676b;
+  text-decoration: underline;
+  padding-top: 10px;
+  width: 30%;
+}
+
+.description-product{
+  color: #363636;
+  padding-top: 50px;
+}
+
+.span-description{
+  font-size: 0.95rem;
+  color: #59595a;
+}
+
+.about-product{
+  font-size: 0.95rem;
+  color: #000000;
+}
+
 
 @media(max-width: 425px){
   .img-buy{

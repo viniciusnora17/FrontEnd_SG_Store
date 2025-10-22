@@ -37,7 +37,7 @@ const Card = ({ img, imgHover, title, price }) => {
 
   const handleClick = () => {
     navigate("/produto", {
-      state: { img, title, price }
+      state: { img, imgHover, title, price }
     });
   };
 
@@ -96,14 +96,14 @@ const Container = () => {
 
   // LISTA DE PRODUTOS
   const products = [
-    { id: 1, img: imgHome11, imgHover: imgHome11Hover, title: "boné ugly people hate me", price: 151.90, category: "bonés", size: "único" },
-    { id: 2, img: imgHome02, imgHover: imgHome02Hover, title: "boné creme montauk", price: 189.90, category: "bonés", size: "único" },
-    { id: 3, img: imgHome03, imgHover: imgHome03Hover, title: "meia cano médio teddy bear", price: 89.90, category: "meia", size: "único" },
-    { id: 4, img: imgHome04, imgHover: imgHome04Hover, title: "bolsa western caramelo", price: 559.90, category: "bolsa", size: "único" },
-    { id: 5, img: imgHome05, imgHover: imgHome05Hover, title: "cinto preto yumi", price: 249.90, category: "cinto", size: "único" },
-    { id: 6, img: imgHome06, imgHover: imgHome06Hover, title: "cinto dallas preto", price: 299.99, category: "cinto", size: "único" },
-    { id: 7, img: imgHome07, imgHover: imgHome07Hover, title: "bolsa luana schedle", price: 459.90, category: "bolsa", size: "único" },
-    { id: 8, img: imgHome08, imgHover: imgHome08Hover, title: "boné bisous burgundy", price: 189.90, category: "bonés", size: "único" },
+    { id: 1, img: imgHome11, imgHover: imgHome11Hover, title: "Boné Ugly People Hate Me", price: 151.90, category: "Bonés", size: "único" },
+    { id: 2, img: imgHome02, imgHover: imgHome02Hover, title: "Boné Creme Montauk", price: 189.90, category: "Bonés", size: "único" },
+    { id: 3, img: imgHome03, imgHover: imgHome03Hover, title: "Meia Cano Médio Teddy Bear", price: 89.90, category: "Meia", size: "único" },
+    { id: 4, img: imgHome04, imgHover: imgHome04Hover, title: "Bolsa Western Caramelo", price: 559.90, category: "Bolsa", size: "único" },
+    { id: 5, img: imgHome05, imgHover: imgHome05Hover, title: "Cinto Preto Yumi", price: 249.90, category: "Cinto", size: "único" },
+    { id: 6, img: imgHome06, imgHover: imgHome06Hover, title: "Cinto Dallas Preto", price: 299.99, category: "Cinto", size: "único" },
+    { id: 7, img: imgHome07, imgHover: imgHome07Hover, title: "Bolsa Luana Schedle", price: 459.90, category: "Bolsa", size: "único" },
+    { id: 8, img: imgHome08, imgHover: imgHome08Hover, title: "Boné Bisous Burgundy", price: 189.90, category: "Bonés", size: "único" },
   ];
 
   // FILTRAGEM
@@ -129,7 +129,7 @@ const Container = () => {
       <Navbar/>
 
       <div className='bg-[#F4F4F4]'>
-        <h2 className="text-clothes flex justify-center items-center">acessórios</h2>
+        <h2 className="text-clothes flex justify-center items-center">Acessórios</h2>
       </div>
 
       <div className='flex items-center justify-center gap-8 !pt-10 bg-[#F4F4F4]'>
@@ -137,9 +137,9 @@ const Container = () => {
     className="hiperlink-filter text-gray-500 hover:text-black transition-colors duration-300"
     onClick={() => setSelectedCategory("")}
   >
-    todos
+    Todos
   </button>
-  {["bonés", "bolsa", "cinto", "meia"].map((cat) => (
+  {["Bonés", "Bolsa", "Cinto", "Meia"].map((cat) => (
     <button
       key={cat}
       className={`hiperlink-filter transition-colors duration-300 ${

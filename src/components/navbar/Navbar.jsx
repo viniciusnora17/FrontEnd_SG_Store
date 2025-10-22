@@ -15,10 +15,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='user-area'>
-        <Link to="/coleções" className='hiperlink'>coleções</Link>
-        <Link to="/roupas" className='hiperlink'>roupas</Link>
-        <Link to="/acessorios" className='hiperlink'>acessórios</Link>
-        <Link to="/sobre-nos" className='hiperlink'>sobre nós</Link>
+        <Link to="/coleções" className='hiperlink'>Coleções</Link>
+        <Link to="/roupas" className='hiperlink'>Roupas</Link>
+        <Link to="/acessorios" className='hiperlink'>Acessórios</Link>
+        <Link to="/sobre-nos" className='hiperlink'>Sobre nós</Link>
       </div>
 
    
