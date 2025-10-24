@@ -21,58 +21,56 @@ const Footer = () => {
     <footer>
       <div className="flex justify-evenly items-center h-auto w-[70%] !pt-5 footer footer-container">
 
-        {/* Nossas páginas */}
+      
         <div className="footer-section">
           <h3 
             className="!font-light footer-title"
             onClick={() => toggleSection("paginas")}
           >
-            nossas páginas
+            Nossas Páginas
           </h3>
           <div className={`footer-links ${openSection === "paginas" ? "open" : ""}`}>
-            <a className="hiperlink-footer" href="">home</a>
-            <a className="hiperlink-footer" href="">minha conta</a>
-            <a className="hiperlink-footer" href="">carrinho</a>
-            <a className="hiperlink-footer" href="">meus likes</a>
+            <a className="hiperlink-footer" href="/">Home</a>
+            <a className="hiperlink-footer" href="">Minha conta</a>
+            <a className="hiperlink-footer" href="">Sacola</a>
+            <a className="hiperlink-footer" href="/liked">Meus likes</a>
           </div>
         </div>
 
-        {/* Termos e suporte */}
+       
         <div className="footer-section">
           <h3 
             className="!font-light footer-title"
             onClick={() => toggleSection("termos")}
           >
-            termos e suporte
+            Termos e Suporte
           </h3>
           <div className={`footer-links ${openSection === "termos" ? "open" : ""}`}>
-            <a className="hiperlink-footer" href="">politicas e trocas</a>
-            <a className="hiperlink-footer" href="">ajuda</a>
-            <a className="hiperlink-footer" href="">trocar ou devolver peça</a>
-            <a className="hiperlink-footer" href="">política de privacidade</a>
+            <a className="hiperlink-footer" href="">Politicas e Trocas</a>
+            <a className="hiperlink-footer" href="">Ajuda</a>
+            <a className="hiperlink-footer" href="">Trocar ou Devolver Peça</a>
+            <a className="hiperlink-footer" href="">Política de Privacidade</a>
           </div>
         </div>
 
-        {/* Entre em contato */}
         <div className="footer-section">
           <h3 
             className="!font-light footer-title"
             onClick={() => toggleSection("contato")}
           >
-            entre em contato
+            Entre em Contato
           </h3>
           <div className={`footer-links ${openSection === "contato" ? "open" : ""}`}>
-            <a className="hiperlink-footer" href="https://www.instagram.com/use.sg.store/" target="_blank">instagram</a>
-            <a className="hiperlink-footer" href="">whatsapp</a>
+            <a className="hiperlink-footer" href="https://www.instagram.com/use.sg.store/" target="_blank">Instagram</a>
+            <a className="hiperlink-footer" href="">Whatsapp</a>
             <a className="hiperlink-footer" href="">+55 19 99999-9999</a>
             <a className="hiperlink-footer" href="">+55 19 99999-9999</a>
           </div>
         </div>
       </div>
 
-      {/* pagamentos */}
       <div className="container-payment !mt-6 !mb-5">
-        <p className="payments !font-light">meios de pagamento</p>
+        <p className="payments !font-light">Meios de Pagamento</p>
             <div className='flex items-center gap-2 !ml-3'>
                 <img src={Visa} alt="Visa Pagamento" />
                 <img src={MasterCard} alt="Mastercard Pagamento" />

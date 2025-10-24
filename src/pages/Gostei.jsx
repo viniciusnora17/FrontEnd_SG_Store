@@ -9,7 +9,7 @@ function SobreNos() {
   return (
     <>
       <Navbar />
-      <Dropdown/>
+      
 
       <div className="h-[70dvh]">
           <h2 className="my-liked">meus likes</h2>
