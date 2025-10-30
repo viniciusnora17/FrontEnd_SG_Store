@@ -11,10 +11,8 @@ export default function CartPage() {
     setCartItems(storedCart);
   }, []);
 
-  // 🔹 Atualiza o localStorage sempre que o carrinho muda
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
+
+ 
 
   // 🔹 Aumentar quantidade
   const handleIncrease = (index) => {

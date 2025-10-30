@@ -6,7 +6,7 @@ import "./ProductPage.css";
 
 export default function ProductPage() {
   const { state } = useLocation();
-  const navigate = useNavigate(); // ADICIONADO
+  const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -31,35 +31,38 @@ export default function ProductPage() {
     setShowModal(true);
   };
 
-  // 🔹 NOVO: quando o usuário clicar em "Finalizar compra" no modal
+  // 🔹 Quando o usuário clicar em "Finalizar compra" no modal
   const handleFinalize = () => {
-  const productToAdd = {
-    title: state.title,
-    price: state.price,
-    img: state.img,
-    size: selectedSize,
-    quantity: 1,
+    const productToAdd = {
+      title: state.title,
+      price: state.price,
+      img: state.img,
+      size: selectedSize,
+      quantity: 1,
+    };
+
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // verifica se já existe o mesmo produto + tamanho
+    const existingItemIndex = existingCart.findIndex(
+      (item) => item.title === productToAdd.title && item.size === productToAdd.size
+    );
+
+    if (existingItemIndex !== -1) {
+      existingCart[existingItemIndex].quantity += 1;
+      localStorage.setItem("cart", JSON.stringify(existingCart));
+    } else {
+      const updatedCart = [...existingCart, productToAdd];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    }
+
+   
+    console.log("Carrinho salvo:", JSON.parse(localStorage.getItem("cart")));
+    setTimeout(() => {
+      setShowModal(false);
+      navigate("/carrinho");
+    }, 100);
   };
-
-  const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  // verifica se já existe o mesmo produto + tamanho
-  const existingItemIndex = existingCart.findIndex(
-    (item) => item.title === productToAdd.title && item.size === productToAdd.size
-  );
-
-  if (existingItemIndex !== -1) {
-    existingCart[existingItemIndex].quantity += 1;
-    localStorage.setItem("cart", JSON.stringify(existingCart));
-  } else {
-    const updatedCart = [...existingCart, productToAdd];
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  }
-
-  setShowModal(false);
-  navigate("/carrinho");
-};
-
 
   return (
     <>
@@ -160,7 +163,6 @@ export default function ProductPage() {
               {state.title} — Tamanho <strong>{selectedSize}</strong>
             </p>
             <div className="modal-buttons">
-              {/* aqui liguei o botão Finalizar compra ao handleFinalize */}
               <button className="btn-finalize" onClick={handleFinalize}>
                 Finalizar compra
               </button>
