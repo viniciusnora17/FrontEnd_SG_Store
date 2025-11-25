@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import './Destaques.css'
 
 const Card = () => {
   return (
-    <StyledWrapper className='flex items-center justify-center h-[60dvh] bg-[#F4F4F4] gap-10'>
+    <StyledWrapper className='flex items-center justify-center h-[60dvh] bg-[#F4F4F4] gap-10 container-destaques'>
       <div className="card overflow-hidden">
         <img className='h-auto' src="https://adaptive-images.uooucdn.com.br/ik-seo/tr:w-1100,h-1594,c-at_max,pr-true,q-80/a22314-ogxys3oyrt0/pv/cd/74/59/15f8d91e7d5fcd6e797344a758/vestido-coastal-off-white-mundo-lolita-large-2.jpg" alt="" />
       </div>

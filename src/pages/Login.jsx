@@ -63,8 +63,53 @@ export default function Login() {
         <Navbar />
       </div>
 
-       <div>
-        <img src={imgBackground} className="w-150" alt="" />
+       <div className="background-login overflow-hidden" >
+         <div className="overflow-hidden">
+          <img src={imgBackground} className="w-148 img-login" alt="" />
+         </div>
+
+         <div className="container-login">
+          <h3 className="text-login">Entre com sua conta</h3>
+          <p className="text-gray-600 !pb-10">Faça seu cadastro ou entre com sua conta Google ou da Apple</p>
+
+          <div className="flex justify-between w-[52%] container-btn">
+            <button className="flex justify-center items-center gap-2 btn-login">
+              <img src={Google} alt="" /> <p className="text-btn">Google</p>
+            </button>
+
+            <button className="flex justify-center items-center gap-2 btn-login">
+              <img className="" src={Apple} alt="" /> <p className="text-btn">Apple</p>
+            </button>
+          </div>
+
+          <div className="flex justify-center items-center gap-3 !pt-10 !pb-4 w-[80%]">
+            <div className="line-login"> </div> <p className="text-gray-600">Ou</p> <div className="line-login"></div>
+          </div>
+
+          <div className="form-container !pb-8">
+            <form className="form-login" action="" method="POST">
+              <div>
+                <label htmlFor="">Nome Completo</label>
+                <input type="text" name="name" id="name" placeholder="ex: Julia Nora" />
+              </div>
+
+               <div className="flex flex-col">
+                <label htmlFor="">Email</label>
+                <input type="email" name="email" id="password" placeholder="ex: julia@gmail.com"/>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Senha"/>
+                <span className="span-text">Sua senha deve conter mais de 8 caracteres</span>
+              </div>
+              
+              <button className="btn-cadastrar" type="submit">Cadastrar-se</button>
+            </form>
+            <p className="text-center !pt-5">Já tem uma conta? Faça seu <span className="cursor-pointer underline">login</span></p>
+          </div>
+         </div>
+
        </div>
 
 

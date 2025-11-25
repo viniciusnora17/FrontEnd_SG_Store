@@ -2,6 +2,9 @@
     .container-destaques{
         flex-direction: column;
     }
+    .card{
+        width: 80% !important;
+    }
 
     .container-img-destaques{
         width: 90%;
