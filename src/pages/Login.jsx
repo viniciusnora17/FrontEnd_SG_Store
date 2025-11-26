@@ -20,7 +20,7 @@ export default function Login() {
   const [acceptError, setAcceptError] = useState("");
 
   const handleCpfChange = (e) => {
-    let value = e.target.value.replace(/\D/g, ""); 
+    let value = e.target.value.replace(/\D/g, "");
     if (value.length > 11) value = value.slice(0, 11);
 
     value = value.replace(/(\d{3})(\d)/, "$1.$2");
@@ -63,12 +63,12 @@ export default function Login() {
         <Navbar />
       </div>
 
-       <div className="background-login overflow-hidden" >
-         <div className="overflow-hidden">
+      <div className="background-login overflow-hidden" >
+        <div className="overflow-hidden">
           <img src={imgBackground} className="w-148 img-login" alt="" />
-         </div>
+        </div>
 
-         <div className="container-login">
+        <div className="container-login">
           <h3 className="text-login">Entre com sua conta</h3>
           <p className="text-gray-600 !pb-10">Faça seu cadastro ou entre com sua conta Google ou da Apple</p>
 
@@ -93,25 +93,73 @@ export default function Login() {
                 <input type="text" name="name" id="name" placeholder="ex: Julia Nora" />
               </div>
 
-               <div className="flex flex-col">
+              <div className="flex flex-col">
                 <label htmlFor="">Email</label>
-                <input type="email" name="email" id="password" placeholder="ex: julia@gmail.com"/>
+                <input type="email" name="email" id="password" placeholder="ex: julia@gmail.com" />
               </div>
 
               <div className="flex flex-col">
                 <label htmlFor="">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Senha"/>
+                <input type="password" name="password" id="password" placeholder="Senha" />
                 <span className="span-text">Sua senha deve conter mais de 8 caracteres</span>
               </div>
-              
+
               <button className="btn-cadastrar" type="submit">Cadastrar-se</button>
             </form>
-            <p className="text-center !pt-5">Já tem uma conta? Faça seu <span className="cursor-pointer underline">login</span></p>
+            <p className="text-center !pt-5">
+              Já tem uma conta? Faça seu{" "}
+              <span
+                className="cursor-pointer underline hover:text-gray-600"
+                onClick={() => setShowModal(true)}
+              >
+                login
+              </span>
+            </p>
           </div>
-         </div>
+        </div>
 
-       </div>
+      </div>
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 flex justify-center items-center !z-50">
+          <div className="bg-white !p-8 rounded-xl shadow-xl w-[400px] relative">
 
+            <button
+              className="absolute right-4 !top-4 text-xl"
+              onClick={() => setShowModal(false)}
+            >
+              ✕
+            </button>
+
+            <h2 className="text-2xl font-semibold mb-4">Entrar na conta</h2>
+
+            <form className="flex flex-col gap-4">
+              <div>
+                <label>Email</label>
+                <input
+                  type="email"
+                  className="mt-1 w-full border !px-3 !py-2 rounded"
+                  placeholder="seuemail@gmail.com"
+                />
+              </div>
+
+              <div>
+                <label>Senha</label>
+                <input
+                  type="password"
+                  className="mt-1 w-full border !px-3 !py-2 rounded"
+                  placeholder="••••••••"
+                />
+              </div>
+
+              <button className="bg-green-600 text-white !py-2 rounded hover:bg-green-700 transition">
+                Entrar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      )}
+ 
 
       <Footer />
     </>

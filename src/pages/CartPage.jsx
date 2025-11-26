@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import "./CartPage.css";
 
 export default function CartPage() {
+
+  const navigate = useNavigate();
+
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -11,29 +15,38 @@ export default function CartPage() {
     setCartItems(storedCart);
   }, []);
 
-
- 
+  // 🔹 Salvar carrinho após qualquer alteração
+  const updateLocalStorage = (items) => {
+    localStorage.setItem("cart", JSON.stringify(items));
+  };
 
   // 🔹 Aumentar quantidade
   const handleIncrease = (index) => {
     const updated = [...cartItems];
     updated[index].quantity += 1;
+
     setCartItems(updated);
+    updateLocalStorage(updated);
   };
 
   // 🔹 Diminuir quantidade
   const handleDecrease = (index) => {
     const updated = [...cartItems];
+
     if (updated[index].quantity > 1) {
       updated[index].quantity -= 1;
+
       setCartItems(updated);
+      updateLocalStorage(updated);
     }
   };
 
   // 🔹 Remover item
   const handleRemove = (index) => {
     const updated = cartItems.filter((_, i) => i !== index);
+
     setCartItems(updated);
+    updateLocalStorage(updated);
   };
 
   // 🔹 Calcular total
@@ -65,12 +78,13 @@ export default function CartPage() {
                     <p>{item.price}</p>
 
                     <div className="quantity-control">
-                     <p>Quantidade:</p>
+                      <p>Quantidade:</p>
                       <button onClick={() => handleDecrease(index)}>-</button>
                       <span>{item.quantity}</span>
                       <button onClick={() => handleIncrease(index)}>+</button>
                     </div>
                   </div>
+
                   <button className="remove-btn" onClick={() => handleRemove(index)}>
                     remover
                   </button>
@@ -80,7 +94,12 @@ export default function CartPage() {
 
             <div className="cart-summary">
               <h2>Total: R$ {total.toFixed(2).replace(".", ",")}</h2>
-              <button className="btn-finalize-order">Finalizar pedido</button>
+              <button
+                className="btn-finalize-order"
+                onClick={() => navigate("/checkout")}
+              >
+                Finalizar pedido
+              </button>
             </div>
           </>
         )}

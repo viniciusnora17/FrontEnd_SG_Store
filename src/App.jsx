@@ -12,6 +12,7 @@ import Collection from "./pages/Collection";
 import Acessories from "./pages/Acessories";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import Cart from "./pages/CartPage"
+import Checkout from "./pages/Checkout"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/acessorios" element={<Acessories />} />
         <Route path="/coleções" element={<Collection />} />
         <Route path="/carrinho" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
 
         {/* Rota do painel admin */}
         <Route path="/admin" element={<AdminDashboard />} />

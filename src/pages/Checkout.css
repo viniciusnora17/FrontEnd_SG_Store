@@ -1,0 +1,156 @@
+/* ====== CONTAINER PRINCIPAL ====== */
+
+.checkout-container {
+  max-width: 1100px;
+  margin: 120px auto 50px;
+  padding: 20px;
+}
+
+.checkout-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* ====== LAYOUT ====== */
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.checkout-items,
+.checkout-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+/* ====== LISTA DE PRODUTOS ====== */
+
+.checkout-items h2 {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 1.4rem;
+}
+
+.checkout-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.checkout-item:last-child {
+  border-bottom: none;
+}
+
+.checkout-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.checkout-item p {
+  margin: 2px 0;
+  color: #555;
+}
+
+.checkout-total {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ====== FORMULÁRIO DE ENDEREÇO ====== */
+
+.checkout-form h2 {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 1.4rem;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.checkout-form input:focus {
+  border-color: #000;
+}
+
+/* ====== MÉTODOS DE PAGAMENTO ====== */
+
+.checkout-form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.pix-info {
+  background: #e7fbe7;
+  padding: 10px;
+  border-radius: 8px;
+  color: #0c7a0c;
+  font-size: 0.95rem;
+}
+
+/* ====== BOTÃO CONFIRMAR PEDIDO ====== */
+
+.btn-confirm {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #000;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-confirm:hover {
+  background: #444;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+@media screen and (max-width: 900px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .checkout-items,
+  .checkout-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .checkout-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .checkout-container h1 {
+    font-size: 1.5rem;
+  }
+}
