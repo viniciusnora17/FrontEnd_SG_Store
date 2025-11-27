@@ -34,6 +34,11 @@
   cursor: pointer;
 }
 
+.btn-login:hover{
+  background-color: rgb(238, 237, 237);
+  transition: 600ms;
+}
+
 .line-login{
   width: 30%;
   background-color: gray;
@@ -58,6 +63,15 @@
 .btn-cadastrar{
   border: 1px solid black;
   padding: 10px;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover{
+  background-color: #A3BC9F;
+  border: none;
+  transition: 600ms;
+  color: #fff;
+  border: 1px solid rgb(145, 145, 145);
 }
 
 

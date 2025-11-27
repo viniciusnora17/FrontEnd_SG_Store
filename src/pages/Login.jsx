@@ -121,23 +121,23 @@ export default function Login() {
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center !z-50">
-          <div className="bg-white !p-8 rounded-xl shadow-xl w-[400px] relative">
+          <div className="bg-white !p-8  shadow-xl w-[400px] relative">
 
             <button
-              className="absolute right-4 !top-4 text-xl"
+              className="absolute right-4 !top-4 text-xl cursor-pointer"
               onClick={() => setShowModal(false)}
             >
               ✕
             </button>
 
-            <h2 className="text-2xl font-semibold mb-4">Entrar na conta</h2>
+            <h2 className="text-3xl font-light !mb-4">Entrar na conta</h2>
 
             <form className="flex flex-col gap-4">
               <div>
                 <label>Email</label>
                 <input
                   type="email"
-                  className="mt-1 w-full border !px-3 !py-2 rounded"
+                  className="mt-1 w-full border !px-3 !py-2 "
                   placeholder="seuemail@gmail.com"
                 />
               </div>
@@ -146,12 +146,13 @@ export default function Login() {
                 <label>Senha</label>
                 <input
                   type="password"
-                  className="mt-1 w-full border !px-3 !py-2 rounded"
+                  className="mt-1 w-full border !px-3 !py-2 "
                   placeholder="••••••••"
                 />
               </div>
 
-              <button className="bg-green-600 text-white !py-2 rounded hover:bg-green-700 transition">
+              <button className="bg-[#A3BC9F] hover:bg-[#94ad90] cursor-pointer text-white !py-2 transition">
+
                 Entrar
               </button>
             </form>

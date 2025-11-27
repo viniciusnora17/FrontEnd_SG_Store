@@ -31,7 +31,7 @@ export default function ProductPage() {
     setShowModal(true);
   };
 
-  // 🔹 Quando o usuário clicar em "Finalizar compra" no modal
+ 
   const handleFinalize = () => {
     const productToAdd = {
       title: state.title,
@@ -116,7 +116,7 @@ export default function ProductPage() {
 
           {/* 🔹 Botão comprar */}
           <button className="btn-buy" onClick={handleBuy}>
-            comprar
+            Comprar
           </button>
 
           {/* 🔹 Mensagem de erro se não selecionar tamanho */}
@@ -162,7 +162,7 @@ export default function ProductPage() {
             <p>
               {state.title} — Tamanho <strong>{selectedSize}</strong>
             </p>
-            <div className="modal-buttons">
+            <div className="modal-button">
               <button className="btn-finalize" onClick={handleFinalize}>
                 Finalizar compra
               </button>

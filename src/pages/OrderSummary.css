@@ -1,64 +1,109 @@
+body{
+  background-color: #F4F4F4;
+}
+
 .order-summary-container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.order-title {
-  font-size: 24px;
+.summary-title {
+  font-size: 2.4rem;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
-.order-box {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.12);
+.summary-card {
+  background: #fff;
+  padding: 18px;
+  margin-bottom: 20px;
+ 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
-.order-section {
-  margin-bottom: 25px;
+.card-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
-.order-section h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.payment-summary {
+.card-line {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  align-items: flex-start;
 }
 
-.qr-img {
-  width: 160px;
-  margin: 10px 0;
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  background: #f2f2f2;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pix-info {
-  font-size: 14px;
-  color: #555;
+.product-list {
+  margin-top: 12px;
 }
 
-.boleto-box {
-  background: #f3f3f3;
-  padding: 10px;
-  border-radius: 8px;
-  font-family: monospace;
+.product-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.product-img {
+  width: 120px;
+  height: 160px;
+
+  
+}
+
+.product-info {
+  flex: 1;
+}
+
+.delivery-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.product-details {
   font-size: 15px;
+  color: #444;
 }
 
-.boleto-info {
+.product-price {
+  min-width: 90px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.small-info {
+  font-size: 15px;
+  color: #666;
+}
+
+.link-btn {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  padding: 6px 0;
   font-size: 14px;
-  color: #555;
 }
 
 .resume-line {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 8px 0;
+  border-top: 1px solid #f3f3f3;
 }
 
 .green {
@@ -66,11 +111,11 @@
 }
 
 .resume-total {
-  margin-top: 15px;
-  font-size: 18px;
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .total {
@@ -79,16 +124,15 @@
 
 .btn-finish {
   width: 100%;
-  margin-top: 25px;
-  background: #111;
+  margin-top: 14px;
+  padding: 12px;
+  background: #1976d2;
   color: white;
-  padding: 14px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
+  transition: 600ms;
 }
 
-.btn-finish:hover {
-  background: #333;
+.btn-finish:hover{
+    background-color: #2a84dd;
 }
