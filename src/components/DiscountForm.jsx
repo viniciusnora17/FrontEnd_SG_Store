@@ -20,7 +20,7 @@ const DiscountForm = () => {
 
   return (
     <div className="bg-[#F4F4F4] h-[40dvh] flex items-center overflow-hidden" id="container-discount">
-      <form onSubmit={handleSubmit} className="w-full">
+      <form onSubmit={handleSubmit} className="w-full form-discount">
         <h2 className="text-[#758573] text-discount">
           Faça seu cadastro e <br /> Ganhe um desconto na sua primeira compra
         </h2>

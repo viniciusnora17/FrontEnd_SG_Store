@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import "./Checkout.css";
 
 export default function CheckoutPage() {
+  const navigate = useNavigate();
+
   const [cartItems, setCartItems] = useState([]);
-  const [paymentMethod, setPaymentMethod] = useState("pix");
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -13,9 +15,16 @@ export default function CheckoutPage() {
   }, []);
 
   const total = cartItems.reduce((acc, item) => {
-    const priceNumber = parseFloat(item.price.replace("R$", "").replace(",", "."));
+    const priceNumber = parseFloat(
+      item.price.replace("R$", "").replace(",", ".")
+    );
     return acc + priceNumber * item.quantity;
   }, 0);
+
+  const handleGoPayment = (e) => {
+    e.preventDefault();
+    navigate("/pagamento"); 
+  };
 
   return (
     <>
@@ -24,88 +33,39 @@ export default function CheckoutPage() {
       </div>
 
       <div className="checkout-container">
-        <h1>Finalizar Pedido</h1>
+        <h2 className="checkout-title">Adicione um endereço</h2>
 
-        <div className="checkout-content">
-          {/* --- ITENS DO CARRINHO --- */}
-          <div className="checkout-items">
-            <h2>Produtos</h2>
-            {cartItems.map((item, i) => (
-              <div className="checkout-item" key={i}>
-                <img src={item.img} alt={item.title} />
-                <div>
-                  <p>{item.title}</p>
-                  <p>Tamanho: {item.size}</p>
-                  <p>Qtd: {item.quantity}</p>
-                  <p>Preço: {item.price}</p>
-                </div>
-              </div>
-            ))}
-
-            <h2 className="checkout-total">
-              Total: R$ {total.toFixed(2).replace(".", ",")}
-            </h2>
-          </div>
-
-          {/* --- ENDEREÇO --- */}
+          {/* --- FORMULÁRIO DE ENDEREÇO --- */}
           <div className="checkout-form">
-            <h2>Endereço de Entrega</h2>
+           
+              <div className="form-group">
+                <label>CEP</label>
+                <input type="text" placeholder="Ex: 02900-010" required />
+              </div>
 
-            <form>
-              <input type="text" placeholder="Rua / Avenida" required />
-              <input type="text" placeholder="Número" required />
-              <input type="text" placeholder="Bairro" required />
-              <input type="text" placeholder="Cidade" required />
-              <input type="text" placeholder="CEP" required />
+            <form onSubmit={handleGoPayment}>
+              <div className="form-group">
+                <label>Rua / Avenida</label>
+                <input type="text" placeholder="Ex: Rua Olivas, 177" required />
+              </div>
 
-              <h2>Método de Pagamento</h2>
+              <div className="form-group">
+                <label>Número</label>
+                <input type="text" placeholder="Ex: 8493" required />
+              </div>
 
-              <label>
-                <input 
-                  type="radio" 
-                  name="payment" 
-                  value="pix"
-                  checked={paymentMethod === "pix"}
-                  onChange={(e) => setPaymentMethod(e.target.value)}
-                /> 
-                PIX
-              </label>
+              <div className="form-group">
+                <label>Complemento (opicional)</label>
+                <input type="text" placeholder="Ex: 245" required />
+              </div>
 
-              <label>
-                <input 
-                  type="radio" 
-                  name="payment" 
-                  value="credito"
-                  checked={paymentMethod === "credito"}
-                  onChange={(e) => setPaymentMethod(e.target.value)}
-                /> 
-                Cartão de Crédito
-              </label>
-
-              <label>
-                <input 
-                  type="radio" 
-                  name="payment" 
-                  value="debito"
-                  checked={paymentMethod === "debito"}
-                  onChange={(e) => setPaymentMethod(e.target.value)}
-                /> 
-                Cartão de Débito
-              </label>
-
-              {paymentMethod === "pix" && (
-                <p className="pix-info">
-                  O QRCode será gerado após confirmar o pedido.
-                </p>
-              )}
-
-              <button type="submit" className="btn-confirm">
-                Confirmar Pedido
+              <button type="submit" className="btn-go-payment">
+                Continuar para Pagamento
               </button>
             </form>
           </div>
         </div>
-      </div>
+     
 
       <Footer />
     </>
