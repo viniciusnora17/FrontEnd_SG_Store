@@ -1,0 +1,94 @@
+.order-summary-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.order-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.order-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.12);
+}
+
+.order-section {
+  margin-bottom: 25px;
+}
+
+.order-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.payment-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qr-img {
+  width: 160px;
+  margin: 10px 0;
+}
+
+.pix-info {
+  font-size: 14px;
+  color: #555;
+}
+
+.boleto-box {
+  background: #f3f3f3;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.boleto-info {
+  font-size: 14px;
+  color: #555;
+}
+
+.resume-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.green {
+  color: #16a34a;
+}
+
+.resume-total {
+  margin-top: 15px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.total {
+  color: #111;
+}
+
+.btn-finish {
+  width: 100%;
+  margin-top: 25px;
+  background: #111;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-finish:hover {
+  background: #333;
+}

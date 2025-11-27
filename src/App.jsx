@@ -13,6 +13,9 @@ import Acessories from "./pages/Acessories";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import Cart from "./pages/CartPage"
 import Checkout from "./pages/Checkout"
+import Payment from "./pages/Payment"
+import OrderSummary from "./pages/OrderSummary"
+
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path="/coleções" element={<Collection />} />
         <Route path="/carrinho" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/pagamento" element={<Payment />} />
+        <Route path="/order-summary" element={<OrderSummary />} />
+        
 
         {/* Rota do painel admin */}
         <Route path="/admin" element={<AdminDashboard />} />

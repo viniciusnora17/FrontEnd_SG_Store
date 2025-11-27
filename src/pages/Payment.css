@@ -1,0 +1,205 @@
+.payment-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.payment-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.payment-total {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: #f3f3f3;
+ 
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.25s;
+}
+
+.payment-option:hover {
+  background: #e7e7e7;
+}
+
+.payment-option img {
+  width: 34px;
+  height: 34px;
+}
+
+.payment-option.selected {
+  border-color: #5abf4b;
+  background: #e8ffe5;
+}
+
+.method-selected {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.description-payment{
+    font-size: 12px;
+    color: rgb(90, 90, 90);
+}
+
+
+/* Fundo escuro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caixa do modal */
+.modal-box {
+  background: #fff;
+  width: 400px;
+  padding: 25px;
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  animation: fadeUp 0.25s ease-out;
+}
+
+/* Animação suave */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-box h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Formulário do modal */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-form label {
+  font-weight: 500;
+  color: #444;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 10px;
+  
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.modal-form input:focus {
+  border-color: #111;
+  outline: none;
+}
+
+/* Botões */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-buttons .cancel,
+.modal-buttons .confirm {
+  width: 48%;
+  padding: 10px;
+
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+/* Cancelar */
+.modal-buttons .cancel {
+  background: #e4e4e4;
+}
+
+.modal-buttons .cancel:hover {
+  background: #d1d1d1;
+}
+
+/* Confirmar */
+.modal-buttons .confirm {
+  background: #111;
+  color: white;
+}
+
+.modal-buttons .confirm:hover {
+  background: #333;
+}
+
+.resume-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #fff;
+  
+
+  /* box-shadow bonito */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.resume-text{
+    font-weight: 600;
+}
+
+.btn-payment{
+    background-color: #2B6DD1;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    color: white;
+    transition: 600ms;
+}
+
+.btn-payment:hover{
+    background-color: #4381df;
+    
+}
+
+.payment-error-message {
+  margin-top: 10px;
+  color: #d9534f;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
